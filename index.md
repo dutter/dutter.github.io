@@ -10,6 +10,6 @@ header:
 
 Studying microbial ecology and evolution in real-world environments.
 
-I do mostly computational work, so in lieu of a nice field site or study organism photo please accept this figure as an artistic substitute.
+I do mostly computational work, so in lieu of a nice field site or study organism photo, please accept this figure as an artistic substitute.
 
 ![](/assets/images/capno_anvio.png)

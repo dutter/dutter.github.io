@@ -1,6 +1,6 @@
 ---
 layout: home2
-title: 
+title: "About"
 category: page
 permalink: about
 
