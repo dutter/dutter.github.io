@@ -48,7 +48,8 @@ kramdown:
 
 
 
-theme: minimal-mistakes-jekyll
+#theme: minimal-mistakes-jekyll  # for local
+remote_theme: "mmistakes/minimal-mistakes@4.9.0"
 
 # minimal mistakes settings:
 minimal_mistakes_skin: "contrast"
