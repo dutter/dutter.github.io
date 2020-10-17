@@ -1,0 +1,33 @@
+I"A
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Daniel Utter
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/About/about.md">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/CV/CV.md">CV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Research/Research.md">Research</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Methods/methods.md">Reproducible Methods</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Misc/omics.md">Essential 'omics commands</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+:ET

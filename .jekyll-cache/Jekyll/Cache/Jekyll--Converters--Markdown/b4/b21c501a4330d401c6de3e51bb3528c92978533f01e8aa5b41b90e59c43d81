@@ -1,0 +1,25 @@
+I"P<ul class="toc__menu">
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#the-process">The process</a>
+    <ul>
+      <li><a href="#identifying-metagenomes-likely-to-contain-populations-with-idrd">Identifying metagenomes likely to contain populations with idrD</a></li>
+      <li><a href="#preparing-the-metagenomes">Preparing the metagenomes</a>
+        <ul>
+          <li><a href="#downloading-and-sorting">Downloading and sorting</a></li>
+          <li><a href="#mapping">Mapping</a></li>
+          <li><a href="#importing-the-results-into-anvio">Importing the results into Anvi’o</a></li>
+          <li><a href="#retrieving-the-coverage-and-variability-data">Retrieving the coverage and variability data</a></li>
+        </ul>
+      </li>
+      <li><a href="#inspecting-metagenome-coverage">Inspecting metagenome coverage</a>
+        <ul>
+          <li><a href="#preliminary-data-processing">Preliminary data processing</a></li>
+          <li><a href="#filtering-metagenomes-based-on-category">Filtering metagenomes based on category</a></li>
+          <li><a href="#binning-metagenomes-by-origin">Binning metagenomes by origin</a></li>
+          <li><a href="#per-nucleotide-coverage-to-visualize-region-specific-coverage">Per-nucleotide coverage to visualize region-specific coverage</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+:ET

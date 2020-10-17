@@ -1,0 +1,21 @@
+I"Z<ul class="toc__menu">
+  <li><a href="#basic-reference-for-useful-omics-related-command-line">Basic reference for useful ‘omics-related command line</a>
+    <ul>
+      <li><a href="#potentially-confusing-vocab-symbols-and-syntax">Potentially confusing vocab, symbols, and syntax</a></li>
+      <li><a href="#navigation">Navigation</a></li>
+      <li><a href="#printing-file-contents-to-the-screen">Printing file contents to the screen</a></li>
+      <li><a href="#writing-and-modifying-files--directories">Writing and modifying files / directories</a></li>
+      <li><a href="#searching-and-manipulating-text">Searching and manipulating text</a>
+        <ul>
+          <li><a href="#grep">grep</a></li>
+          <li><a href="#awk">awk</a></li>
+          <li><a href="#others">Others</a></li>
+          <li><a href="#generic-one-liner-for-loops">Generic one-liner for loops:</a></li>
+          <li><a href="#useful-built-in-variables">Useful built-in variables</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#walkthrough--tutorial-resources">Walkthrough / Tutorial Resources:</a></li>
+</ul>
+:ET

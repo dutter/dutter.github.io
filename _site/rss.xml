@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+        <title>Daniel Utter</title>
+        <description>Daniel Utter - du</description>
+        <link>http://dutter.github.io</link>
+        <atom:link href="http://dutter.github.io/rss.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Fri, 16 Oct 2020 20:14:51 -0400</lastBuildDate>
+        <pubDate>Fri, 16 Oct 2020 20:14:51 -0400</pubDate>
+        <ttl>60</ttl>
+
+
+
+</channel>
+</rss>

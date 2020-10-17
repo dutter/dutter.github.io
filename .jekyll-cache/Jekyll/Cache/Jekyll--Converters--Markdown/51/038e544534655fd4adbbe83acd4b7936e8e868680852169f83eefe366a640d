@@ -1,0 +1,49 @@
+I"�
+<ul class="toc__menu">
+  <li><a href="#overview">Overview</a>
+    <ul>
+      <li><a href="#organization--workflow">Organization &amp; Workflow</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-1---collecting-and-annotating-genomes">Step 1 - Collecting and annotating genomes</a>
+    <ul>
+      <li><a href="#getting-the-genomes-from-ncbi">Getting the genomes from NCBI</a></li>
+      <li><a href="#anvio-contigs-database">Anvi’o contigs database</a>
+        <ul>
+          <li><a href="#whole-thing">Whole thing</a></li>
+          <li><a href="#functional-annotation">Functional annotation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#step-2---mapping">Step 2 - Mapping</a>
+    <ul>
+      <li><a href="#data-acquisition---hmp-metagenomes">Data acquisition - HMP Metagenomes</a></li>
+      <li><a href="#recruiting-hmp-metagenomes-to-the-contigs">Recruiting HMP metagenomes to the contigs</a>
+        <ul>
+          <li><a href="#a-short-statement-on-competitive-mapping-and-its-interpretation">A short statement on competitive mapping and its interpretation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#step-3---profiling-the-metagenome-recruitment">Step 3 - Profiling the metagenome recruitment</a></li>
+  <li><a href="#step-4---pangenome-and-metapangenome-construction">Step 4 - Pangenome and metapangenome construction</a>
+      - {:.} <a href="#some-background-on-the-methods-wrapped-by-the-anvio-programs">Some background on the methods wrapped by the anvio programs</a>
+          - {:.} <a href="#conceptual-assumptions-and-rationale-of-metapangenome-details">Conceptual assumptions and rationale of metapangenome details</a>
+    <ul>
+      <li><a href="#combining-metapangenomes">Combining metapangenomes</a></li>
+    </ul>
+  </li>
+  <li><a href="#anvio-interactive-display-choices-for-metapangenomes">Anvi’o interactive display choices for metapangenomes</a></li>
+  <li><a href="#supplemental-tables">Supplemental tables</a></li>
+  <li><a href="#querying-the-gene-cluster-annotations-for-enriched-functions">Querying the gene cluster annotations for enriched functions</a></li>
+  <li><a href="#granular-analysis-of-mapping-results-at-the-per-gene-per-sample-level">Granular analysis of mapping results at the per-gene, per-sample level</a></li>
+  <li><a href="#differential-function-analysis">Differential function analysis</a></li>
+  <li><a href="#nucleotide-level-coverage-plots-figure-4a-4b">Nucleotide level coverage plots (Figure 4A, 4B)</a>
+      - {:.} <a href="#rothia-candidate-driver-of-adaptation-to-bm">Rothia candidate driver of adaptation to BM</a>
+    <ul>
+      <li><a href="#investigating-the-effect-of-non-specific-mapping">Investigating the effect of non-specific mapping</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

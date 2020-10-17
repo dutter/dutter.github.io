@@ -1,0 +1,1733 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Metapangenomics of Rothia and H. parainfluenzae - Daniel Utter</title>
+<meta name="description" content="From Utter et al., sumbitted ">
+
+
+  <meta name="author" content="du">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daniel Utter">
+<meta property="og:title" content="Metapangenomics of Rothia and H. parainfluenzae">
+<meta property="og:url" content="http://localhost:4000/projects/oral_metapan">
+
+
+  <meta property="og:description" content="From Utter et al., sumbitted ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-10-16T20:14:51-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/projects/oral_metapan">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Daniel Utter Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Daniel Utter
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/About/about.md">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/CV/CV.md">CV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Research/Research.md">Research</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Methods/methods.md">Reproducible Methods</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Misc/omics.md">Essential 'omics commands</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Metapangenomics of Rothia and H. parainfluenzae">
+    <meta itemprop="description" content="From Utter et al., sumbitted">
+    <meta itemprop="datePublished" content="2020-10-16T20:14:51-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Metapangenomics of <em>Rothia</em> and <em>H. parainfluenzae</em>
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#overview">Overview</a>
+    <ul>
+      <li><a href="#organization--workflow">Organization &amp; Workflow</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-1---collecting-and-annotating-genomes">Step 1 - Collecting and annotating genomes</a>
+    <ul>
+      <li><a href="#getting-the-genomes-from-ncbi">Getting the genomes from NCBI</a></li>
+      <li><a href="#anvio-contigs-database">Anvi’o contigs database</a>
+        <ul>
+          <li><a href="#whole-thing">Whole thing</a></li>
+          <li><a href="#functional-annotation">Functional annotation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#step-2---mapping">Step 2 - Mapping</a>
+    <ul>
+      <li><a href="#data-acquisition---hmp-metagenomes">Data acquisition - HMP Metagenomes</a></li>
+      <li><a href="#recruiting-hmp-metagenomes-to-the-contigs">Recruiting HMP metagenomes to the contigs</a>
+        <ul>
+          <li><a href="#a-short-statement-on-competitive-mapping-and-its-interpretation">A short statement on competitive mapping and its interpretation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#step-3---profiling-the-metagenome-recruitment">Step 3 - Profiling the metagenome recruitment</a></li>
+  <li><a href="#step-4---pangenome-and-metapangenome-construction">Step 4 - Pangenome and metapangenome construction</a>
+      - {:.} <a href="#some-background-on-the-methods-wrapped-by-the-anvio-programs">Some background on the methods wrapped by the anvio programs</a>
+          - {:.} <a href="#conceptual-assumptions-and-rationale-of-metapangenome-details">Conceptual assumptions and rationale of metapangenome details</a>
+    <ul>
+      <li><a href="#combining-metapangenomes">Combining metapangenomes</a></li>
+    </ul>
+  </li>
+  <li><a href="#anvio-interactive-display-choices-for-metapangenomes">Anvi’o interactive display choices for metapangenomes</a></li>
+  <li><a href="#supplemental-tables">Supplemental tables</a></li>
+  <li><a href="#querying-the-gene-cluster-annotations-for-enriched-functions">Querying the gene cluster annotations for enriched functions</a></li>
+  <li><a href="#granular-analysis-of-mapping-results-at-the-per-gene-per-sample-level">Granular analysis of mapping results at the per-gene, per-sample level</a></li>
+  <li><a href="#differential-function-analysis">Differential function analysis</a></li>
+  <li><a href="#nucleotide-level-coverage-plots-figure-4a-4b">Nucleotide level coverage plots (Figure 4A, 4B)</a>
+      - {:.} <a href="#rothia-candidate-driver-of-adaptation-to-bm">Rothia candidate driver of adaptation to BM</a>
+    <ul>
+      <li><a href="#investigating-the-effect-of-non-specific-mapping">Investigating the effect of non-specific mapping</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="overview">Overview</h2>
+
+<p>This is the long-form, reproducible documentation of the metapangenomic methods
+used for our study <a href="https://www.biorxiv.org/content/10.1101/2020.05.01.072496v1">Metapangenomics</a>. Our goal in writing this is to
+make the workflow be as transparent and reducible as possible, and also
+to provide a step-by-step workflow for interested readers to adapt our
+methods to their own needs. Most of the code here is based off of <a href="http://merenlab.org/data/2018_Delmont_and_Eren_Metapangenomics/">Tom
+Delmont and Meren’s <em>Prochlorococcus</em> metapangenome
+workflow</a>,
+and we are deeply indebted to their project and their dedication to
+sharing a reproducible workflows.</p>
+
+<p>Our project investiated the environmental representation of the various
+bacterial pangenomes to learn more about the ecology and evolution of
+microbial biogeography. We were particularly interested in identifying
+and understanding the population structure of bacteria within the oral
+cavity, and generating as short as possible lists of candidate genes or
+functions that may be involved in the observed population structure,
+using the healthy human mouth as a model system. The mouth is ideally
+suited to such studies of habit adaptation, as it consists of many
+distinct sites spatially connected by saliva but each with
+characteristically distinct community assemblages. We focused on three
+oral sites (hereafter ‘habitats’ to avoid ambiguity) - tongue dorsum
+(TD), buccal mucosa (BM), and supragingival plaque (SUPP). Many resident
+oral bacterial taxa have many high-quality genomes from cultured
+isolates, so we collected previously published genomes and combined this
+information with metagenomes from the Human Microbiome Project to
+address our goals.</p>
+
+<p>This workflow shows the specific code used for <em>Haemophilus
+parainfluenzae</em>, and changing a few variable names will reproduce the
+<em>Rothia</em> analyses as well.</p>
+
+<h3 id="organization--workflow">Organization &amp; Workflow</h3>
+
+<p>Each oral habitat (tongue dorsum, TD; buccal mucosa, BM; supragingival
+plaque, SUPP) was processed independently in parallel. We used batch
+scripts and job arrays for this. So each oral habitat referred to the
+same annotated contigs database, to which a different set of metagenomes
+were mapped and downstream files were kept distinct by appending e.g.
+<code class="highlighter-rouge">-bm</code> identifiers to file names. This way, everything happens in the
+same directory but with minimal duplication of scripts. Ultimately,
+three independent pangenomes were created, one from each habitat, and
+then exported to be overlaid onto a single pangenome figure. If this is
+not clear, it will be later, hopefully.</p>
+
+<p><strong>Side note:</strong> We ran all of the anvi’o workflows on Harvard
+University’s Odyssey3 cluster, which uses the Slurm scheduler. We have
+kept the Slurm header information specifying the cluster parameters
+requested, since this includes the parallelization information. Also
+this gives some context for memory and time requirements for
+replicability.</p>
+
+<h2 id="step-1---collecting-and-annotating-genomes">Step 1 - Collecting and annotating genomes</h2>
+
+<h3 id="getting-the-genomes-from-ncbi">Getting the genomes from NCBI</h3>
+
+<p>Genomes were programmatically downloaded from NCBI RefSeq using the
+files found at
+<a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/" class="uri">ftp://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/</a>
+as of 24 July, 2018. Note that the GenBank accession list should contain
+all the RefSeq genomes but also additional genomes not thought to be of
+reference quality by NCBI, and so probably should bear a little more
+scrutiny in your study (as we did here).</p>
+
+<p>Here is the ad hoc downloader script we wrote to programmatically
+download these. The NCBI assembly sheet, taxon to search for, and
+directory into which the genomes are downloaded get specified in the top
+3 lines. Please note that this script renames the contig deflines to be
+A) simple and anvi’o compatible and B) contain the assembly sheet’s
+genus, species, and strain identifier, so that later the originally
+assigned taxonomy can be recovered. Since these genomes were originally
+downloaded, anvi’o now has a more elegant workflow for downloading NCBI
+genomes; we include this code not as a recommendation of our ad hoc
+method over anvi’o’s method, but simply to detail how it was done</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nv">assemblyFile</span><span class="o">=</span><span class="s2">"assembly_summary_refseq.txt"</span>
+<span class="nv">taxa</span><span class="o">=</span><span class="s2">"Haemophilus_parainfluenzae"</span>
+<span class="nv">taxDir</span><span class="o">=</span><span class="s2">"Haemophilus_parainfluenzae"</span>
+
+<span class="nb">mkdir </span>ncbi_genomes
+<span class="nb">mkdir </span>ncbi_genomes/<span class="nv">$taxDir</span>
+
+<span class="k">for </span>taxon <span class="k">in</span> <span class="nv">$taxa</span><span class="p">;</span> <span class="k">do</span>
+
+<span class="c"># make sure whitespaces or lack thereof are ok</span>
+<span class="nv">taxonSafe</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="nv">$taxon</span> | <span class="nb">tr</span> <span class="s1">' '</span> <span class="s1">'_'</span><span class="si">)</span>
+<span class="nv">taxonGrep</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="nv">$taxon</span> | <span class="nb">tr</span> <span class="s1">'_'</span> <span class="s1">' '</span><span class="si">)</span>
+
+<span class="c"># assembly directory on the ncbi ftp site is the 20th column in assembly file</span>
+<span class="nv">ftpDir</span><span class="o">=</span><span class="si">$(</span><span class="nb">grep</span> <span class="s2">"</span><span class="nv">$taxonGrep</span><span class="s2">"</span> <span class="nv">$assemblyFile</span> | <span class="nb">awk</span> <span class="nt">-F</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span> <span class="s1">'{print $20}'</span><span class="si">)</span>
+
+<span class="nb">cd </span>ncbi_genomes/<span class="nv">$taxDir</span>
+
+<span class="k">for </span>dirPath <span class="k">in</span> <span class="nv">$ftpDir</span><span class="p">;</span> <span class="k">do</span>
+
+<span class="c"># get just the ID</span>
+<span class="nv">genomeID</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$dirPath</span><span class="s2">"</span> | <span class="nb">sed</span> <span class="s1">'s/^.*\///g'</span><span class="si">)</span>
+<span class="c"># get the path to the genomic fasta file</span>
+<span class="nv">ftpPath</span><span class="o">=</span><span class="s2">"</span><span class="nv">$dirPath</span><span class="s2">/</span><span class="k">${</span><span class="nv">genomeID</span><span class="k">}</span><span class="s2">_genomic.fna.gz"</span>
+<span class="c"># make a friendly prefix - 'Gspe' from 'Genus species'</span>
+<span class="nv">friendlyName</span><span class="o">=</span><span class="si">$(</span><span class="nb">grep</span> <span class="s2">"</span><span class="nv">$genomeID</span><span class="s2">"</span> ../../<span class="nv">$assemblyFile</span> | <span class="nb">awk</span> <span class="nt">-F</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span> <span class="s1">'{print $8}'</span> | <span class="nb">awk</span> <span class="s1">'{print $1 FS $2}'</span> | <span class="nb">tr</span> <span class="nt">-d</span> <span class="s1">'_,.-'</span> | <span class="nb">sed</span> <span class="nt">-E</span> <span class="s1">'s/^(.)[A-z0-9]* ([A-z0-9]{2}).*$/\1\2/'</span><span class="si">)</span>
+
+
+<span class="c"># figure out the taxon + strain id from sheet to make deflines; 9 = strain,10=additional info</span>
+<span class="c"># this makes it simple to go from anvio contigs db to genome's original strain ID on NCBI</span>
+<span class="nv">deflineName</span><span class="o">=</span><span class="si">$(</span><span class="nb">grep</span> <span class="s2">"</span><span class="nv">$genomeID</span><span class="s2">"</span> ../../<span class="nv">$assemblyFile</span> | <span class="nb">awk</span> <span class="nt">-F</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span> <span class="s1">'{print $8 " " $9}'</span> | <span class="nb">sed</span> <span class="s1">'s/strain=//'</span> | <span class="nb">tr</span> <span class="s1">' -'</span> <span class="s1">'_'</span> | <span class="nb">tr</span> <span class="nt">-d</span> <span class="s1">'/=(),.'</span><span class="si">)</span>
+
+<span class="nv">genomeID</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">friendlyName</span><span class="k">}</span><span class="s2">_</span><span class="nv">$genomeID</span><span class="s2">"</span>
+
+<span class="c"># download &amp; uncompress</span>
+wget <span class="nv">$ftpPath</span> <span class="nt">-O</span> <span class="nv">$genomeID</span>.fa.gz
+<span class="nb">gunzip</span> <span class="nv">$genomeID</span>.fa.gz
+
+<span class="c"># rename the deflines</span>
+<span class="nb">awk</span> <span class="nt">-v</span> <span class="nv">defline</span><span class="o">=</span><span class="s2">"</span><span class="nv">$deflineName</span><span class="s2">"</span> <span class="s1">'/^&gt;/{print "&gt;" defline "_ctg" (++i)}!/^&gt;/'</span> <span class="nv">$genomeID</span>.fa <span class="o">&gt;&gt;</span> temp.txt
+<span class="nb">mv </span>temp.txt <span class="nv">$genomeID</span>.fa
+
+<span class="k">done
+
+done</span>
+</code></pre></div></div>
+
+<h3 id="anvio-contigs-database">Anvi’o contigs database</h3>
+
+<p>Now it is time to concatenate the downloaded raw FASTAs into a single
+FASTA to start the anvi’o workflow. For us, the code looked like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat ncbi_genomes/Haemophilus_parainfluenzae/*fa &gt; Haemophilus-isolates.fa
+</code></pre></div></div>
+
+<h4 id="whole-thing">Whole thing</h4>
+
+<p>From here, an anvi’o contigs database is then generated, from which we
+invoked anvi’o’s HMM profiler, launched annotation, and made a bowtie2
+reference database out of the original FASTA. As part of the
+<code class="highlighter-rouge">anvi-gen-contigs-db</code> command,
+<a href="https://github.com/hyattpd/Prodigal">Prodigal</a> was run to call open
+reading frames (ORFs). We did this with the following script (we called
+it <code class="highlighter-rouge">01_genContigsDB.sh</code>). Note that this script submits two other
+scripts - specifically, <code class="highlighter-rouge">99_geneFunctions.sh</code> which runs the annotation
+script, and <code class="highlighter-rouge">02_btmapHMP.sh</code> which starts the next step.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c">#SBATCH -N 1 #1 node</span>
+<span class="c">#SBATCH -n 6 # 1 cores from each</span>
+<span class="c">#SBATCH --contiguous</span>
+<span class="c">#SBATCH --mem=12G #per node</span>
+<span class="c">#SBATCH -t 0-12:00:00</span>
+<span class="c">#SBATCH -p shared</span>
+<span class="c">#SBATCH --job-name="HaemCont"</span>
+<span class="c">#SBATCH -o odyssey_cont.out</span>
+<span class="c">#SBATCH -e odyssey_cont.err</span>
+<span class="c">#SBATCH --mail-type=END</span>
+
+<span class="nv">genus</span><span class="o">=</span><span class="s2">"Haemophilus"</span>
+
+<span class="c"># need to activate venv directly because node receiving job doesn't like bashrc aliases</span>
+<span class="nb">source</span> ~/virtual-envs/anvio-dev-venv/bin/activate
+
+<span class="c"># clean up fasta deflines in contig file at the start for smooth downstream</span>
+anvi-script-reformat-fasta <span class="nt">-o</span> <span class="nv">$genus</span><span class="nt">-isolates-CLEAN</span>.fa <span class="nt">--simplify-names</span> <span class="nt">-r</span> <span class="nv">$genus</span><span class="nt">-isolates-contigIDs</span>.txt <span class="nv">$genus</span><span class="nt">-isolates</span>.fa
+
+<span class="nb">mv</span> <span class="nv">$genus</span><span class="nt">-isolates-CLEAN</span>.fa <span class="nv">$genus</span><span class="nt">-isolates</span>.fa
+
+<span class="c"># make the contig db</span>
+anvi-gen-contigs-database <span class="nt">-f</span> <span class="nv">$genus</span><span class="nt">-isolates</span>.fa <span class="nt">-n</span> <span class="nv">$genus</span> <span class="nt">-o</span> <span class="nv">$genus</span><span class="nt">-isolates-CONTIGS</span>.db
+
+<span class="c"># get bacterial single-copy gene, 16S, info from hmm collections</span>
+anvi-run-hmms <span class="nt">-c</span> <span class="nv">$genus</span><span class="nt">-isolates-CONTIGS</span>.db <span class="nt">--num-threads</span> 6
+
+<span class="c"># get the functional annotation started</span>
+sbatch 99_geneFunctions.sh
+
+<span class="c"># make bt of contigs for mapping later</span>
+module load samtools/1.5-fasrc01 bowtie2/2.3.2-fasrc01
+bowtie2-build <span class="nv">$genus</span><span class="nt">-isolates</span>.fa <span class="nv">$genus</span><span class="nt">-isolates</span>
+
+<span class="c"># start next step</span>
+sbatch 02_btmapHMP.sh
+</code></pre></div></div>
+
+<h4 id="functional-annotation">Functional annotation</h4>
+
+<p>We used <a href="https://www.ebi.ac.uk/interpro/about.html">Interproscan</a> to get
+functional annotation from a variety of databases. The core command
+consists of</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh PATH/TO/INTERPRO/interproscan-5.36-75.0/interproscan.sh -i genes.faa -o genes.tsv -f tsv --appl TIGRFAM,Pfam,SUPERFAMILY,ProDom
+</code></pre></div></div>
+
+<p>However, for cases like <em>Rothia</em> with 69 genomes’ worth of genes, a
+non-parallel workflow took too long, so we made a simple
+parallelization. Here is the annotation script we used as
+<code class="highlighter-rouge">99_geneFunctions.sh</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nv">prefix</span><span class="o">=</span><span class="s2">"Haemophilus-isolates"</span>
+
+<span class="c"># activate anvio if not already</span>
+<span class="nb">source</span> ~/virtual-envs/anvio-dev-venv/bin/activate
+
+<span class="c"># export amino acid sequences</span>
+anvi-get-sequences-for-gene-calls <span class="nt">--get-aa-sequences</span> <span class="nt">--wrap</span> 0 <span class="nt">-c</span> <span class="nv">$prefix</span><span class="nt">-CONTIGS</span>.db <span class="nt">-o</span> <span class="nv">$prefix</span><span class="nt">-gene-calls-aa</span>.faa
+
+<span class="nv">batchDir</span><span class="o">=</span><span class="s2">"</span><span class="nv">$prefix</span><span class="s2">-gene-calls-batches"</span>
+<span class="nb">mkdir</span> <span class="nv">$batchDir</span>
+
+<span class="c"># chop file up into 25k sequences per file</span>
+<span class="nb">split</span> <span class="nt">-l</span> 50000 <span class="nt">-d</span> <span class="nt">-a</span> 4 <span class="nv">$prefix</span><span class="nt">-gene-calls-aa</span>.faa <span class="nv">$batchDir</span>/<span class="nv">$prefix</span><span class="nt">-gene-calls-aa</span>.faa-
+
+<span class="c"># figure out how many batches we made</span>
+<span class="nv">hiBatch</span><span class="o">=</span><span class="si">$(</span><span class="nb">ls</span> <span class="nv">$batchDir</span>/<span class="k">*</span>.faa-<span class="k">*</span> | <span class="nb">tail</span> <span class="nt">-1</span> | <span class="nb">sed</span> <span class="s1">'s/^.*-0*\([1-9]*\)\(.$\)/\1\2/'</span><span class="si">)</span>
+<span class="nv">numBatches</span><span class="o">=</span><span class="k">$((</span><span class="nv">$hiBatch</span> <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
+
+<span class="c"># set up the file to concatenate into</span>
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"gene_callers_id</span><span class="se">\t</span><span class="s2">source</span><span class="se">\t</span><span class="s2">accession</span><span class="se">\t</span><span class="s2">function</span><span class="se">\t</span><span class="s2">e_value"</span> <span class="o">&gt;</span> interpro-results-fmt-<span class="nv">$prefix</span>.tsv
+
+<span class="nb">echo</span> <span class="s2">"#!/bin/bash
+#SBATCH -N 1 #1 nodes of ram
+#SBATCH -n 12 # 12 cores from each
+#SBATCH --contiguous
+#SBATCH --mem=12G #per node
+#SBATCH -t 0-6:00:00
+#SBATCH -p shared
+#SBATCH --array=0-</span><span class="nv">$hiBatch</span><span class="s2">%</span><span class="nv">$numBatches</span><span class="s2">
+#SBATCH --job-name='interpro-%a'
+#SBATCH -o odyssey_anviIP_%a.out
+#SBATCH -e odyssey_anviIP_%a.err
+#SBATCH --mail-type=END
+
+# format job array id to match the split output
+taskNum=</span><span class="si">$(</span><span class="nb">printf</span> %04d <span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="si">)</span><span class="s2">
+
+batch=</span><span class="nv">$batchDir</span><span class="s2">/</span><span class="nv">$prefix</span><span class="s2">-gene-calls.faa-</span><span class="nv">$taskNum</span><span class="s2">
+
+module load jdk/1.8.0_172-fasrc01
+
+./../../interproscan-sh/interproscan-5.36-75.0/interproscan.sh -i </span><span class="nv">$batch</span><span class="s2"> -o </span><span class="k">${</span><span class="nv">batch</span><span class="k">}</span><span class="s2">.tsv -f tsv --appl TIGRFAM,Pfam,SUPERFAMILY,ProDom,Gene3D
+
+# format it manually to be safe 
+cat </span><span class="k">${</span><span class="nv">batch</span><span class="k">}</span><span class="s2">.tsv | awk -F</span><span class="se">\"\t\"</span><span class="s2"> '{print </span><span class="nv">$1</span><span class="s2"> FS </span><span class="nv">$4</span><span class="s2"> FS </span><span class="nv">$5</span><span class="s2"> FS </span><span class="nv">$6</span><span class="s2"> FS </span><span class="nv">$9</span><span class="s2">}' &gt;&gt; interpro-results-fmt-</span><span class="nv">$prefix</span><span class="s2">.tsv
+
+"</span> <span class="o">&gt;</span> ip-<span class="nv">$batch</span>.sh <span class="o">&amp;&amp;</span> sbatch ip-<span class="nv">$batch</span>.sh <span class="o">&amp;&amp;</span> <span class="nb">rm </span>ip-<span class="nv">$batch</span>.sh
+</code></pre></div></div>
+
+<p>We invoked <code class="highlighter-rouge">01_genContigsDB.sh</code>, which read the contig FASTAs into an
+anvi’o contigs DB and then called the functional annotation script,
+which wrote the file <code class="highlighter-rouge">interpro-results-fmt-Haemophilus-isolates.tsv</code>
+containing the annotation info. After everything here finished, we
+incorporated the functional annotation into the contigs db with the
+command</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anvi-import-functions -c Haemophilus-isolates-CONTIGS.db -i interpro-results-fmt-Haemophilus-isolates.tsv
+</code></pre></div></div>
+
+<p>The resultant contigs database can be found in <a href="https://doi.org/10.6084/m9.figshare.11591763.v1">this FigShare
+dataset</a></p>
+
+<h2 id="step-2---mapping">Step 2 - Mapping</h2>
+
+<h3 id="data-acquisition---hmp-metagenomes">Data acquisition - HMP Metagenomes</h3>
+
+<p>Raw short-read metagenomic data from the Human Microbiome Project (HMP)
+(HMP, 2012; Lloyd-Price et al., 2017) was downloaded for the tongue
+dorsum (TD, n = 188), buccal mucosa (BM, n = 169), and supragingival
+plaque (SUPP, n = 194) sites using HMP data portal at
+<a href="https://portal.hmpdacc.org/" class="uri">https://portal.hmpdacc.org/</a>.
+Paths for each sample were downloaded via the HMP portal and uploaded to
+Odyssey3, from which we ran an ad-hoc script to download all of them. We
+used the S3 method as it was the most reliable. Here is the script we
+used for downloading the buccal mucosa metagenomes:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c">#SBATCH -N 1 #1 nodes of ram</span>
+<span class="c">#SBATCH -n 1 # 1 cores from each</span>
+<span class="c">#SBATCH --contiguous</span>
+<span class="c">#SBATCH --mem=2G #per node</span>
+<span class="c">#SBATCH -t 0-6:00:00</span>
+<span class="c">#SBATCH -p shared</span>
+<span class="c">#SBATCH --array=0-33%34</span>
+<span class="c">#SBATCH --job-name="dlHMP"</span>
+<span class="c">#SBATCH -o odyssey_downloadHuman-%a.out</span>
+<span class="c">#SBATCH -e odyssey_downloadHuman-%a.err</span>
+<span class="c">#SBATCH --mail-type=NONE</span>
+
+<span class="c"># cat buccal_manifest.txt | split -l 6 -d -a 3 - hmpBatch_</span>
+
+<span class="c"># format to match what we made</span>
+<span class="nv">taskNum</span><span class="o">=</span><span class="si">$(</span><span class="nb">printf</span> %03d <span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="si">)</span>
+
+<span class="nv">batch</span><span class="o">=</span><span class="s2">"hmpBatch_</span><span class="nv">$taskNum</span><span class="s2">"</span>
+
+<span class="c"># activate anvio</span>
+<span class="nb">source</span> ~/virtual-envs/anvio-dev-venv/bin/activate
+
+<span class="c">#loop through each sample in this batch</span>
+<span class="k">for </span>hmp <span class="k">in</span> <span class="si">$(</span><span class="nb">sed</span> <span class="s1">'s/^.*s3/s3/; s/bz2.*$/bz2/'</span> <span class="nv">$batch</span><span class="si">)</span><span class="p">;</span> <span class="k">do
+
+</span>sh <span class="nt">-c</span> <span class="s1">'aws s3 cp "$0" .'</span> <span class="nv">$hmp</span>
+<span class="nb">tar</span> <span class="nt">-xjf</span> <span class="si">$(</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$hmp</span><span class="s2">"</span> | <span class="nb">sed</span> <span class="s1">'s,^.*/,,g'</span><span class="si">)</span>
+
+<span class="k">done</span>
+</code></pre></div></div>
+
+<p>Here, the <code class="highlighter-rouge">buccal_manifest.txt</code> file was the saved text file of the HMP
+DACC cart for BM metagenomes, after removing the header line. Prior to
+running this script, we ran the commented-out line
+<code class="highlighter-rouge">cat buccal_manifest.txt | split -l 5 -d -a 3 - hmpBatch_</code> as a oneliner
+at the command prompt to split into manifest into 5-metagenome batches
+that the array would then process, and we manually changed the array
+parameters <code class="highlighter-rouge">--array=0-33%34</code> to match the number of batches this made.</p>
+
+<p>This same process was performed for tongue dorsum (TD), buccal mucosa
+(BM), and supragingival plaque (SUPP), each of which in its own
+directory, e.g., <code class="highlighter-rouge">hmp_all_bm/</code>.</p>
+
+<p>After downloading and uncompressing, the R1 and R2 reads were in a
+subdirectory for each metagenome, so we moved the R1/R2 pairs out of
+these subdirectories leaving the junk singleton reads behind (e.g.
+<code class="highlighter-rouge">mv */*.1.fastq .</code>), then deleted the downloaded *bz2 files and the
+directories.</p>
+
+<h3 id="recruiting-hmp-metagenomes-to-the-contigs">Recruiting HMP metagenomes to the contigs</h3>
+
+<p>After downloading the metagenomes as described above, we competitively
+recruited the HMP metagenomes onto the exact contigs included in the
+contigs database using bowtie2 (Langmead &amp; Salzberg, 2012) with default
+parameters (–sensitive). Each oral habitat (TD, BM, SUPP) were mapped
+onto separate but identical contigs databases. We did this with one
+script that made a separate job array for each habitat. Here is our code
+for tongue dorsum metagenome recruitment:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c"># 20171016 - assign gene fams by interproscan</span>
+<span class="nv">prefix</span><span class="o">=</span><span class="s2">"Haemophilus-isolates"</span>
+
+<span class="c"># this sets up the site suffixe to iterate through in parallel</span>
+<span class="nv">sites</span><span class="o">=(</span>bm td supp<span class="o">)</span>
+
+<span class="c"># iterate through each habitat - this will create a custom script for each habitat that is an array over all that sites metagenomes</span>
+<span class="k">for </span>site <span class="k">in</span> <span class="k">${</span><span class="nv">sites</span><span class="p">[*]</span><span class="k">}</span><span class="p">;</span> <span class="k">do
+
+</span><span class="nb">mkdir </span>bt_mapped_<span class="k">${</span><span class="nv">prefix</span><span class="k">}</span>_<span class="nv">$site</span>
+<span class="nb">mkdir </span>batches_<span class="nv">$site</span>
+
+<span class="c"># make batches for each sites samples</span>
+<span class="nb">ls</span> <span class="nt">--color</span><span class="o">=</span>none hmp_all_<span class="nv">$site</span>/<span class="k">*</span>1.fastq | <span class="nb">split</span> <span class="nt">-l</span> 8 <span class="nt">-d</span> <span class="nt">-a</span> 3 - batches_<span class="nv">$site</span>/<span class="nv">$site</span>-
+
+<span class="c"># figure out the upper bound of the array for slurm</span>
+<span class="nv">hiBatch</span><span class="o">=</span><span class="si">$(</span><span class="nb">ls </span>batches_<span class="nv">$site</span>/<span class="nv">$site</span>-<span class="k">*</span> | <span class="nb">tail</span> <span class="nt">-1</span> | <span class="nb">sed</span> <span class="s1">'s/^.*-0*\([1-9]*\)\(.$\)/\1\2/'</span><span class="si">)</span>
+<span class="nv">numBatches</span><span class="o">=</span><span class="k">$((</span><span class="nv">$hiBatch</span> <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
+
+<span class="nb">echo</span> <span class="s2">"#!/bin/bash
+#SBATCH -N 1 #1 nodes of ram
+#SBATCH -n 12 # 1 cores from each
+#SBATCH --contiguous
+#SBATCH --mem=18G #per node
+#SBATCH -t 0-06:00:00
+#SBATCH -p shared
+#SBATCH --array=0-</span><span class="nv">$hiBatch</span><span class="s2">%</span><span class="nv">$numBatches</span><span class="s2">
+#SBATCH --job-name='bt-</span><span class="nv">$site</span><span class="s2">'
+#SBATCH -o odyssey_bt-</span><span class="nv">$site</span><span class="s2">-%a.out
+#SBATCH -e odyssey_bt-</span><span class="nv">$site</span><span class="s2">-%a.err
+#SBATCH --mail-type=NONE
+
+# format this array element id to match batch name
+taskNum=</span><span class="se">\$</span><span class="s2">(printf %03d </span><span class="se">\$</span><span class="s2">SLURM_ARRAY_TASK_ID)
+
+module load samtools/1.5-fasrc02 bowtie2/2.3.2-fasrc02 xz/5.2.2-fasrc01
+
+# set what batch we are on
+batch=</span><span class="se">\"</span><span class="s2">batches_</span><span class="nv">$site</span><span class="s2">/</span><span class="nv">$site</span><span class="s2">-</span><span class="se">\$</span><span class="s2">taskNum</span><span class="se">\"</span><span class="s2">
+
+# loop through metagenomes to map in this batch
+for FQ in </span><span class="se">\$</span><span class="s2">(cat </span><span class="se">\$</span><span class="s2">batch); do 
+
+# FQ was the R1 path so extract the R2 path from it
+r2=</span><span class="se">\$</span><span class="s2">(echo </span><span class="se">\"\$</span><span class="s2">FQ</span><span class="se">\"</span><span class="s2"> | sed 's/.1.fastq/.2.fastq/')
+
+bowtie2 -x </span><span class="nv">$prefix</span><span class="s2"> -1 </span><span class="se">\$</span><span class="s2">FQ -2 </span><span class="se">\$</span><span class="s2">r2 --no-unal --threads 12 | samtools view -b - | samtools sort -@ 12 - &gt; </span><span class="se">\$</span><span class="s2">(echo </span><span class="se">\"\$</span><span class="s2">FQ</span><span class="se">\"</span><span class="s2"> | sed 's/hmp_all/bt_mapped_</span><span class="nv">$prefix</span><span class="s2">/; s/</span><span class="se">\.</span><span class="s2">1.fastq.*</span><span class="nv">$/</span><span class="s2">.bam/')
+
+# index as next anvio step requires indexed bams
+samtools index </span><span class="se">\$</span><span class="s2">(echo </span><span class="se">\"\$</span><span class="s2">FQ</span><span class="se">\"</span><span class="s2"> | sed 's/hmp_all/bt_mapped_</span><span class="nv">$prefix</span><span class="s2">/; s/</span><span class="se">\.</span><span class="s2">1.fastq.*</span><span class="nv">$/</span><span class="s2">.bam/')
+
+done
+"</span> <span class="o">&gt;</span> bt-<span class="nv">$site</span><span class="nt">-array</span>.sh <span class="o">&amp;&amp;</span> sbatch bt-<span class="nv">$site</span><span class="nt">-array</span>.sh <span class="o">&amp;&amp;</span> <span class="nb">rm </span>bt-<span class="nv">$site</span><span class="nt">-array</span>.sh <span class="c"># save this file and submit it then delete for housekeeping</span>
+
+<span class="nb">sleep </span>30
+
+<span class="k">done</span>
+</code></pre></div></div>
+
+<p>This script is <code class="highlighter-rouge">02_btmapHMP.sh</code> and was run directly from
+<code class="highlighter-rouge">01_genContigsDB.sh</code> (Step 1)</p>
+
+<h4 id="a-short-statement-on-competitive-mapping-and-its-interpretation">A short statement on competitive mapping and its interpretation</h4>
+
+<p>Each sample’s short reads were mapped against all genomes for that
+taxon; thus, the bowtie2 matched each read to the best-matching genomic
+locus, randomly choosing between multiple loci if they were equally
+best. Thus, coverage at highly conserved regions is affected by the
+total population abundance in that sample, while the coverage at
+variable loci reflects that particular sequence variant’s abundance.</p>
+
+<p>Regions of identical nucleotide similarity between reference genomes,
+relative to the metagenome, then recruit an equivalent number of reads,
+reflecting their proportion of the total population abundance in that
+sample. However, regions with polymorphic sites allow for discrimination
+between genomes, based the variability of sequences in the pangenome /
+database.</p>
+
+<h2 id="step-3---profiling-the-metagenome-recruitment">Step 3 - Profiling the metagenome recruitment</h2>
+
+<p>After mapping, we profiled each sample’s coverage into an anvi’o profile
+database and then merged them all. We wrote one master script to rule
+them all, with the same overall architecture as in Step 2.</p>
+
+<p>Individual sample profiling code:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c"># 20171016 - assign gene fams by interproscan</span>
+<span class="nv">prefix</span><span class="o">=</span><span class="s2">"Haemophilus-isolates"</span>
+
+<span class="c"># need to activate venv directly because node receiving job order doesn't play with bashrc aliases</span>
+
+<span class="c"># habitats to iterate over</span>
+<span class="nv">sites</span><span class="o">=(</span>bm td supp<span class="o">)</span>
+
+<span class="c"># for each habitat we generate a custom job array</span>
+<span class="k">for </span>site <span class="k">in</span> <span class="k">${</span><span class="nv">sites</span><span class="p">[*]</span><span class="k">}</span><span class="p">;</span> <span class="k">do
+
+</span><span class="nb">mkdir </span>profs_mapped_<span class="k">${</span><span class="nv">prefix</span><span class="k">}</span>_<span class="nv">$site</span>
+
+<span class="c"># make batches for each sites samples but leaving commented off as the bowtie2 batches work here too</span>
+<span class="c">#ls --color=none hmp_all_$site/*1.fastq | split -l 8 -d -a 3 - batches_$site/$site-</span>
+
+<span class="c"># find high number of batches we made before</span>
+<span class="nv">hiBatch</span><span class="o">=</span><span class="si">$(</span><span class="nb">ls </span>batches_<span class="nv">$site</span>/<span class="nv">$site</span>-<span class="k">*</span> | <span class="nb">tail</span> <span class="nt">-1</span> | <span class="nb">sed</span> <span class="s1">'s/^.*-0*\([1-9]*\)\(.$\)/\1\2/'</span><span class="si">)</span>
+<span class="nv">numBatches</span><span class="o">=</span><span class="k">$((</span><span class="nv">$hiBatch</span> <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
+
+<span class="nb">echo</span> <span class="s2">"#!/bin/bash
+#SBATCH -N 1 #1 nodes of ram
+#SBATCH -n 12 # 1 cores from each
+#SBATCH --contiguous
+#SBATCH --mem=18G #per node
+#SBATCH -t 0-08:00:00
+#SBATCH -p shared
+#SBATCH --array=0-</span><span class="nv">$hiBatch</span><span class="s2">%</span><span class="nv">$numBatches</span><span class="s2">
+#SBATCH --job-name='pro-</span><span class="nv">$site</span><span class="s2">'
+#SBATCH -o odyssey_prof-</span><span class="nv">$site</span><span class="s2">-%a.out
+#SBATCH -e odyssey_prof-</span><span class="nv">$site</span><span class="s2">-%a.err
+#SBATCH --mail-type=NONE
+
+taskNum=</span><span class="se">\$</span><span class="s2">(printf %03d </span><span class="se">\$</span><span class="s2">SLURM_ARRAY_TASK_ID)
+
+source ~/virtual-envs/anvio-dev-venv/bin/activate
+
+batch=</span><span class="se">\"</span><span class="s2">batches_</span><span class="nv">$site</span><span class="s2">/</span><span class="nv">$site</span><span class="s2">-</span><span class="se">\$</span><span class="s2">taskNum</span><span class="se">\"</span><span class="s2">
+
+# for each fastq that was mapped
+for FQ in </span><span class="se">\$</span><span class="s2">(cat </span><span class="se">\$</span><span class="s2">batch); do
+
+# recreate the name of the bam from the name of the fastq
+bam=</span><span class="se">\$</span><span class="s2">(echo </span><span class="se">\"\$</span><span class="s2">FQ</span><span class="se">\"</span><span class="s2"> | sed 's/hmp_all/bt_mapped_</span><span class="nv">$prefix</span><span class="s2">/; s/</span><span class="se">\.</span><span class="s2">1.fastq.*</span><span class="nv">$/</span><span class="s2">.bam/')
+
+# generate a profile
+anvi-profile -i </span><span class="se">\$</span><span class="s2">bam -c </span><span class="nv">$prefix</span><span class="s2">-CONTIGS.db -W -M 0 -T 12 --write-buffer-size 500 -o </span><span class="se">\$</span><span class="s2">(echo </span><span class="se">\"\$</span><span class="s2">bam</span><span class="se">\"</span><span class="s2"> | sed 's/bt/profs/; s/.bam//')
+
+done
+"</span> <span class="o">&gt;</span> prof-<span class="nv">$site</span>.sh <span class="o">&amp;&amp;</span> sbatch prof-<span class="nv">$site</span>.sh <span class="o">&amp;&amp;</span> <span class="nb">rm </span>prof-<span class="nv">$site</span>.sh
+
+<span class="nb">sleep </span>25
+<span class="k">done</span>
+</code></pre></div></div>
+
+<p>Note that it if reproducing this analysis, retaining the -M flag is
+highly important. From the anvi’o documentation, <code class="highlighter-rouge">-M</code> parameter is the</p>
+
+<blockquote>
+  <p>Minimum length of contigs in a BAM file to analyze … we chose the
+default to be 2500 [nt]</p>
+</blockquote>
+
+<p>Since a few genomes we encountered contained contigs with fewer than
+2500 nt, we elected to maintain all contigs, rather than dropping
+contigs or genomes. anvi’o sensibly set this default to 2.5 kb for the
+purpose of meaningful tetranucleotide frequency comparisons for bin
+refinement; since we are not refining bins but rather working off of
+existing genomes from nominally axenic isolates, we feel our choice is
+justified.</p>
+
+<p>Another important factor is that we used the same contigs db for all the
+profiles. In other words, we made one *-CONTIGS.db at the start, and
+then mapped hundreds of metagenomes onto it, and now have made over a
+hundread each of TD, BM, and SUPP metagenome profiles for this one set
+of contigs.</p>
+
+<h2 id="step-4---pangenome-and-metapangenome-construction">Step 4 - Pangenome and metapangenome construction</h2>
+
+<p>This step incoporation of multiple related substeps. The overall
+workflow is to merge each habitat’s profiles into a single merged
+profile database, then store the information about which contigs belong
+to which genomes since that hasn’t been done yet. Then, now that we have
+the information stored about which contigs and genes came from which
+genome, we can make a pangenome. Once we have this, since we have the 3
+profile databases that contain the information about coverage, SNPs, etc
+in each metagenome sample from each site corresponding to the genes in
+our CONTIG.db, we can overlay that metagenomic data onto the pangenome
+to have a metapangenome. This was all accomplished in one script, like
+so:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c"># 20171016 - assign gene fams by interproscan</span>
+<span class="nv">prefix</span><span class="o">=</span><span class="s2">"Haemophilus-isolates"</span>
+
+<span class="c"># make a two-column table of which contigs go with which genomes for later, easy since original contigs had this already</span>
+<span class="nb">sed</span> <span class="s1">'s/_ctg[0-9]*$//'</span> <span class="nv">$prefix</span><span class="nt">-contigIDs</span>.txt <span class="o">&gt;</span> <span class="nv">$prefix</span><span class="nt">-renaming-manual</span>.tsv
+
+<span class="c"># list of habitats to iterate over</span>
+<span class="nv">sites</span><span class="o">=(</span>td bm supp<span class="o">)</span>
+<span class="nv">mcl</span><span class="o">=</span>10
+
+<span class="k">for </span>site <span class="k">in</span> <span class="k">${</span><span class="nv">sites</span><span class="p">[*]</span><span class="k">}</span><span class="p">;</span> <span class="k">do
+
+</span><span class="nb">echo</span> <span class="s2">"#!/bin/bash
+#SBATCH -N 1 #1 node
+#SBATCH -n 12 # 12 cores from each
+#SBATCH --contiguous
+#SBATCH --mem=120G #per node
+#SBATCH -t 1-18:00:00
+#SBATCH -p shared
+#SBATCH --job-name=</span><span class="se">\"</span><span class="s2">fin-</span><span class="nv">$site</span><span class="s2">-</span><span class="nv">$prefix</span><span class="se">\"</span><span class="s2">
+#SBATCH -o odyssey_metapan-</span><span class="nv">$site</span><span class="s2">-</span><span class="nv">$prefix</span><span class="s2">.out
+#SBATCH -e odyssey_metapan-</span><span class="nv">$site</span><span class="s2">-</span><span class="nv">$prefix</span><span class="s2">.err
+#SBATCH --mail-type=END
+
+# activate anvio and load necessary modules
+source ~/virtual-envs/anvio-dev-venv/bin/activate
+module load mcl/14.137-fasrc01 ncbi-blast/2.6.0+-fasrc01 
+
+# merge the individual profiles into a single profile database
+anvi-merge profs_mapped_</span><span class="k">${</span><span class="nv">prefix</span><span class="k">}</span><span class="s2">_</span><span class="nv">$site</span><span class="s2">/*/PROFILE.db -c </span><span class="nv">$prefix</span><span class="s2">-CONTIGS.db -o </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-MERGED -W
+
+# import the data that matches contigs to their genomes
+anvi-import-collection -c </span><span class="nv">$prefix</span><span class="s2">-CONTIGS.db -p </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-MERGED/PROFILE.db -C Genomes --contigs-mode </span><span class="nv">$prefix</span><span class="s2">-renaming-manual.tsv
+
+# summarize the mapping data so we have all the information nicely for next steps
+anvi-summarize -c </span><span class="nv">$prefix</span><span class="s2">-CONTIGS.db -p </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-MERGED/PROFILE.db -C Genomes -o </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-SUMMARY
+
+# run custom script to generate a table telling anvio where to find all the information for each genome for the next pangenome step
+./anvi-script-gen-internal-genomes-table.sh </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">
+
+# correct the output as we share one CONTIGS db with three profiles
+sed </span><span class="se">\"</span><span class="s2">s/</span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-CONTIGS.db/</span><span class="nv">$prefix</span><span class="s2">-CONTIGS.db/g</span><span class="se">\"</span><span class="s2"> </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-internal-genomes-table.txt &gt; tmp 
+mv tmp </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-internal-genomes-table.txt
+
+# pangenome is two steps - store all the gene info, then calculate the pangenome
+anvi-gen-genomes-storage -i </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-internal-genomes-table.txt -o </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-GENOMES.db
+anvi-pan-genome --mcl-inflation </span><span class="nv">$mcl</span><span class="s2"> -o </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-PAN -g </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-GENOMES.db -n </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2"> --use-ncbi-blast -T 12 --minbit 0.5
+
+# then summarize the the metagenomic data on top of pangenome
+anvi-meta-pan-genome -i </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-internal-genomes-table.txt -g </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-GENOMES.db -p </span><span class="nv">$prefix</span><span class="s2">-</span><span class="nv">$site</span><span class="s2">-PAN/*PAN.db --fraction-of-median-coverage 0.25 --min-detection 0.5
+"</span> <span class="o">&gt;</span> finish-<span class="nv">$site</span>.sh <span class="o">&amp;&amp;</span> sbatch finish-<span class="nv">$site</span>.sh <span class="o">&amp;&amp;</span> <span class="nb">rm </span>finish-<span class="nv">$site</span>.sh
+
+<span class="nb">sleep </span>30
+
+<span class="k">done</span>
+</code></pre></div></div>
+
+<p>At this point, for our <em>H. parainfluenzae</em> specific case shown here, we
+have one directory with a single contigs db called
+<code class="highlighter-rouge">Haemophilus-isolates-CONTIGS.db</code> and three merged profile databases
+like <code class="highlighter-rouge">Haemophilus-isolates-bm-MERGED/PROFILE.db</code> with coverage and
+variant data from all the metagenomes for that habitat, and three genome
+databases like <code class="highlighter-rouge">Haemophilus-isolates-bm-GENOMES.db</code> and three pangenome
+databases like <code class="highlighter-rouge">Haemophilus-isolates-bm-10-CONTIGS.db</code> where the number
+is the mcl inflation factor used.</p>
+
+<p>The <code class="highlighter-rouge">*GENOMES.db</code> and <code class="highlighter-rouge">*PAN</code> databases can be found in <a href="https://doi.org/10.6084/m9.figshare.11591763.v1">this FigShare
+dataset</a>.</p>
+
+<h4 id="some-background-on-the-methods-wrapped-by-the-anvio-programs">Some background on the methods wrapped by the anvio programs</h4>
+
+<p>The pangenome was calculated with the anvi-pan-genome command. We wanted
+to compare homologous genes between all genomes (here, <em>H.
+parainfluenzae</em>), so we first need to cluster the observed genes
+(technically, ORFs) into homologous units – what anvi’o and we refer to
+as <strong>gene clusters</strong>. For more background, please see <a href="http://merenlab.org/2016/11/08/pangenomics-v2/">the step-by-step
+anvi’o documentation and explanation
+here</a>. BLASTP (Altschul
+et al., 1990) computed amino acid-level similarities between all
+possible ORF pairs after alignment with MUSCLE (Edgar, 2004). Too-weak
+matches were culled by employing the –minbit criterion with the default
+value of 0.5. The Markov Cluster Algorithm (MCL) (van Dongen &amp;
+Abreu-Goodger, 2012) then used these pairwise identities to group ORFs
+into gene clusters, putatively homologous gene groups. MCL uses a
+hyperparameter (inflation, <code class="highlighter-rouge">--mcl-inflation</code>) to adjust the clustering
+sensitivity, i.e., the tendency to split clusters. For the nominally
+single-species <em>H. parainfluenzae</em> pangenome we used
+<code class="highlighter-rouge">--mcl-inflation 10</code>; for all other pangenomes which were genus-level,
+we used <code class="highlighter-rouge">--mcl-inflation 6</code>.</p>
+
+<p>The <code class="highlighter-rouge">anvi-pan-genome</code> family of commands requires <a href="http://merenlab.org/2016/11/08/pangenomics-v2/#generating-an-anvio-genomes-storage">a specially-formatted
+table</a>
+to tell anvi’o where to look. This is the helper script
+<code class="highlighter-rouge">anvi-script-gen-internal-genomes-table.sh</code> we wrote and reference in
+the above script to collect all this info:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nv">taxonPrefix</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">collection</span><span class="o">=</span><span class="s2">"Genomes"</span>
+
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"name</span><span class="se">\t</span><span class="s2">bin_id</span><span class="se">\t</span><span class="s2">collection_id</span><span class="se">\t</span><span class="s2">profile_db_path</span><span class="se">\t</span><span class="s2">contigs_db_path"</span> <span class="o">&gt;</span> <span class="nv">$taxonPrefix</span><span class="nt">-internal-genomes-table</span>.txt
+
+<span class="k">for </span>bin <span class="k">in</span> <span class="si">$(</span><span class="nb">ls</span> <span class="nv">$taxonPrefix</span><span class="nt">-SUMMARY</span>/bin_by_bin<span class="si">)</span><span class="p">;</span> <span class="k">do
+
+</span><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="nv">$bin</span><span class="se">\t</span><span class="nv">$bin</span><span class="se">\t</span><span class="nv">$collection</span><span class="se">\t</span><span class="nv">$taxonPrefix</span><span class="s2">-MERGED/PROFILE.db</span><span class="se">\t</span><span class="nv">$taxonPrefix</span><span class="s2">-CONTIGS.db"</span> <span class="o">&gt;&gt;</span> <span class="nv">$taxonPrefix</span><span class="nt">-internal-genomes-table</span>.txt
+
+<span class="k">done</span>
+</code></pre></div></div>
+
+<p>This wrote the needed info as <code class="highlighter-rouge">*-internal-genomes-table.txt</code> that was
+used for the pangenome steps.</p>
+
+<h5 id="conceptual-assumptions-and-rationale-of-metapangenome-details">Conceptual assumptions and rationale of metapangenome details</h5>
+
+<p>Note that the <code class="highlighter-rouge">--min-detection</code> parameter in <code class="highlighter-rouge">anvi-meta-pan-genome</code> is
+left at the default value of <code class="highlighter-rouge">0.5</code>. Thus, if half or more of the total
+nucleotides in a genome cannot be covered by at least one metagenome for
+that habitat, the program skips trying to calculate anything and returns
+a value of <code class="highlighter-rouge">NA</code>. This protects us from cases where we could be looking
+at curious coverage disparities between a gene and its genome, but it is
+simply a result of the fact that the genome is not represented in this
+habitat.</p>
+
+<p>Here, the <code class="highlighter-rouge">--fraction-of-median-coverage 0.25</code> parameter means that we
+set the threshold between ‘<strong>environmental core</strong>’ or ‘<strong>environmental
+accessory</strong>’ for each gene’s median coverage across a habitat’s
+metagenomes to be 0.25 of the genome’s corresponding coverage across
+those same samples. For instance, <em>H. parainfluenzae</em> T3T1 obtained a
+median coverage of 12X across the 188 TD metagenomes. Or to look at it a
+different way, if the median TD metagenome covered T3T1 12X, then if a
+given T3T1 gene had a median coverage of 1.2X from those same 188
+metagenomes, it would be considered environmental accessory in TD.
+However, if a different T3T1 gene had a median coverage of 4.8X or even
+27.6X, then that gene would be environmental core in TD.</p>
+
+<p>By thresholding relative to genomic coverage we can scale our
+expectation for finding a given gene in a habitat based on the genome.
+We do this so that when our metric reports that a gene is ‘environmental
+accessory’ in a habitat, we know that we’re not just seeing every gene
+from a low-abundance genome but rather a gene that is much less covered
+in its habitat than in the environment. So, this determination of
+environmental core/accessory is a proxy for whether a gene sequence is
+at a notably lower frequency in the environment than we presume its
+background genome to be (which could be a result of selection).</p>
+
+<p>Relating to the genome’s median coverage also helps even out noise in
+gene-level coverages from non-specific mapping (falsely inflating
+coverage) or from having highly similar DNA sequences in the bowtie2
+reference database competing for the same metagenome reads (lowering
+coverage).</p>
+
+<h3 id="combining-metapangenomes">Combining metapangenomes</h3>
+
+<p>We then combined each habitat’s metagenome’s environmental
+core/accessory layer onto a single pangenome figure so we could directly
+compare the environmental representation of each homologous gene across
+sites.</p>
+
+<p>All of each pangenome’s misc data were exported using
+<code class="highlighter-rouge">anvi-export-misc-data</code> parameter, e.g.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nv">prefix</span><span class="o">=</span><span class="s2">"Haemophilus-isolates"</span>
+<span class="nv">readsStart</span><span class="o">=</span>11  <span class="c"># which column in anvio layers table is the start of the metagenomes</span>
+
+<span class="nv">sites</span><span class="o">=(</span>td bm supp<span class="o">)</span>  <span class="c"># important that td is first if that will be the one onto which others are added</span>
+
+<span class="k">for </span>site <span class="k">in</span> <span class="k">${</span><span class="nv">sites</span><span class="p">[*]</span><span class="k">}</span><span class="p">;</span> <span class="k">do
+
+</span>anvi-export-misc-data <span class="nt">-p</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-PAN</span>/<span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-PAN</span>.db <span class="nt">-t</span> items <span class="nt">-o</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-items</span>.txt
+anvi-export-misc-data <span class="nt">-p</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-PAN</span>/<span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-PAN</span>.db <span class="nt">-t</span> layers <span class="nt">-o</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-layers</span>.txt
+
+<span class="c"># delete the unprocessed columns from TD so don't end up with two sets of TD metagenomes (formatted + unformatted)</span>
+anvi-delete-misc-data <span class="nt">-p</span> <span class="nv">$prefix</span><span class="nt">-td-PAN</span>/<span class="nv">$prefix</span><span class="nt">-td-PAN</span>.db <span class="nt">-t</span> layers <span class="nt">--keys-to-remove</span> <span class="si">$(</span><span class="nb">head</span> <span class="nt">-1</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-layers</span>.txt | <span class="nb">cut</span> <span class="nt">-f</span><span class="nv">$readsStart</span>- - | <span class="nb">tr</span> <span class="s1">'\t'</span> <span class="s1">','</span><span class="si">)</span>
+
+<span class="c"># select metapan rings from items data and add oral habitat as prefix</span>
+<span class="nb">awk</span> <span class="nt">-F</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span> <span class="nt">-v</span> <span class="nv">site</span><span class="o">=</span><span class="nv">$site</span> <span class="s1">'BEGIN{site=toupper(site)}; NR==1{print $1 FS site"-"$9 FS site"-"$10 FS site"-"$11 FS site"-"$12} NR&gt;1 {print $1 FS $9 FS $10 FS $11 FS $12}'</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-items</span>.txt <span class="o">&gt;</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-items</span>.tmp
+<span class="c"># prepend capitalized site ID before each metagenome's coverage of the genomes</span>
+<span class="nb">cut</span> <span class="nt">-d</span><span class="s1">' '</span> <span class="nt">-f1</span>,<span class="nv">$readsStart</span>- <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-layers</span>.txt | <span class="nb">sed</span> <span class="s2">"s/SRS/</span><span class="se">\U</span><span class="nv">$site</span><span class="s2">-SRS/g"</span> <span class="o">&gt;</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-layers</span>.tmp
+
+<span class="c"># trim off junk from SRS filenames in header</span>
+<span class="nb">sed</span> <span class="nt">-i</span><span class="s2">""</span> <span class="s1">'s/_DENOVO_DUPLICATES_MARKED_TRIMMED//g'</span> <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-layers</span>.tmp
+
+<span class="c"># import this data back into the td data</span>
+anvi-import-misc-data <span class="nt">-p</span> <span class="nv">$prefix</span><span class="nt">-td-PAN</span>/<span class="nv">$prefix</span><span class="nt">-td-PAN</span>.db <span class="nt">-t</span> items <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-items</span>.tmp
+anvi-import-misc-data <span class="nt">-p</span> <span class="nv">$prefix</span><span class="nt">-td-PAN</span>/<span class="nv">$prefix</span><span class="nt">-td-PAN</span>.db <span class="nt">-t</span> layers <span class="nv">$prefix</span>-<span class="nv">$site</span><span class="nt">-layers</span>.tmp
+
+<span class="k">done</span>
+</code></pre></div></div>
+
+<p>For the <code class="highlighter-rouge">*layers.txt</code> file, which contains each genome’s per-sample
+coverage information, we used a custom R script to calculate and export
+the median coverage for each genome for each site, as well as combine
+the per-sample coverages for a heatmap:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"Haemophilus-isolates-td-layers.tmp"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\t"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"Haemophilus-isolates-bm-layers.tmp"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\t"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"Haemophilus-isolates-supp-layers.tmp"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\t"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># save genome ids for later</span><span class="w">
+</span><span class="n">genomeIDs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w">
+
+</span><span class="c1"># get just the coverages</span><span class="w">
+</span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="p">[,</span><span class="n">grep</span><span class="p">(</span><span class="s2">"SR"</span><span class="p">,</span><span class="w"> </span><span class="n">colnames</span><span class="p">(</span><span class="n">t</span><span class="p">))]</span><span class="w">
+</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">b</span><span class="p">[,</span><span class="n">grep</span><span class="p">(</span><span class="s2">"SR"</span><span class="p">,</span><span class="w"> </span><span class="n">colnames</span><span class="p">(</span><span class="n">b</span><span class="p">))]</span><span class="w">
+</span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">p</span><span class="p">[,</span><span class="n">grep</span><span class="p">(</span><span class="s2">"SR"</span><span class="p">,</span><span class="w"> </span><span class="n">colnames</span><span class="p">(</span><span class="n">p</span><span class="p">))]</span><span class="w">
+
+</span><span class="c1"># get the median for each row=genome</span><span class="w">
+</span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">median</span><span class="p">)</span><span class="w">
+</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">median</span><span class="p">)</span><span class="w">
+</span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">median</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># save to import into anvio</span><span class="w">
+</span><span class="n">write.table</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="nf">as.character</span><span class="p">(</span><span class="n">genomeIDs</span><span class="p">),</span><span class="w"> </span><span class="n">TD_HMP_MEDIAN</span><span class="o">=</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">BM_HMP_MEDIAN</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">SUPP_HMP_MEDIAN</span><span class="o">=</span><span class="n">p</span><span class="p">),</span><span class="w"> </span><span class="s2">"haem_hmp_median.tsv"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\t"</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="o">=</span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>which makes a file that looks like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##      layers                                 TD_HMP_MEDIAN     
+## [1,] "Haemophilus_parainfluenzae_1128_HPAR" "3.50155084141615"
+## [2,] "Haemophilus_parainfluenzae_1209_HPAR" "6.815398696077"  
+## [3,] "Haemophilus_parainfluenzae_137_HINF"  "3.1613550551289" 
+## [4,] "Haemophilus_parainfluenzae_146_HPAR"  "15.1593914157683"
+## [5,] "Haemophilus_parainfluenzae_155_HPAR"  "3.47668191817337"
+## [6,] "Haemophilus_parainfluenzae_174_HPAR"  "3.35610746823065"
+##      BM_HMP_MEDIAN       SUPP_HMP_MEDIAN    
+## [1,] "0.657201515386123" "1.06875757236494" 
+## [2,] "1.08419195652694"  "1.55167011239881" 
+## [3,] "0.565412049050462" "1.9723758712279"  
+## [4,] "1.06501435940931"  "1.88690992300501" 
+## [5,] "0.563448807228174" "0.794885888409524"
+## [6,] "0.636198880422302" "2.31254813948498"
+</code></pre></div></div>
+
+<p>All these data were then imported into the TD pangenome database (TD
+chosen arbitrarily) using <code class="highlighter-rouge">anvi-import-misc-data -t layers</code>.</p>
+
+<h2 id="anvio-interactive-display-choices-for-metapangenomes">Anvi’o interactive display choices for metapangenomes</h2>
+
+<p>The genome layers in the pangenomes were ordered by gene cluster
+frequency, and the gene clusters were ordered by frequency in genomes.</p>
+
+<p>Coloring and spacing were set manually through the anvio interactive
+interface <code class="highlighter-rouge">anvi-display-pan</code></p>
+
+<h2 id="supplemental-tables">Supplemental tables</h2>
+
+<p>Supplemental tables of gene clusters and their functions (i.e., SD1,
+SD3) were generated by summarizing each combined metapangenome with
+<code class="highlighter-rouge">anvi-summarize</code>, like</p>
+
+<p><code class="highlighter-rouge">anvi-summarize -g Haemophilus-isolates-GENOMES.db -p Haemophilus-isolates-td-PAN/*PAN.db -C default -o Haemophilus-isolates-td-PAN-SUMMARY</code></p>
+
+<h2 id="querying-the-gene-cluster-annotations-for-enriched-functions">Querying the gene cluster annotations for enriched functions</h2>
+
+<p>Pangenomes ultimately rely on the ability to cluster genes into ‘gene
+clusters’ based on detecting islands in amino-acid sequence space
+(described above). But, how should we interpret each gene cluster,
+biologically? In other words, do different gene clusters by and large
+represent distinct functions, or different sequence groups of the same
+functions? This has significant implications for how we proceed with
+interpreting core genomes, etc.</p>
+
+<p>Before the methods, it is probably a good idea to talk about evolution.
+The fundamental problem of pangenomes is that each gene may be under a
+different selective regime. For instance, a ribosomal protein evolves
+under different constraints than a given transcriptional regulater than
+a membrane transporter. This is essentially why it is so important to
+select a representative gene(s) for building a phylogeny. An extreme
+example is the gene encoding the RuBisCO large subunit, all of which fix
+CO_2_ yet the sequences are divergent except for a tiny window of
+conservation around the active site. To be clear, such divergence exists
+on a much, much more broad evolutionary scale than either of the taxa
+investigated here. On the other hand, the 16S ribosomal RNA gene
+sequence is conserved across all of Bacteria. And, even a ‘small’
+trunctation can totally abolish enzymatic function (e.g. Sirias et
+al. 2020 in submission). So when thinking about what evolutionary or
+functional relationships we want our gene clustering algorithm to
+recover, there is not a one-size-fits-all approach given the disparity
+in selective constraints within a genome.</p>
+
+<p>To understand the functional implications of our gene clusters, we took
+two approaches: 1) Re-create the pangenome, but plot functions on the
+radial axis vs genomes, instead of gene clusters x genomes (most useful
+for Rothia). 2) Count up the number of gene clusters per function, and
+pay special attention to cases where one function is found in all
+genomes but split into species-specific gene clusters.</p>
+
+<p>To re-create the pangenome, we applied <a href="http://merenlab.org/2016/11/08/pangenomics-v2/#making-sense-of-functions-in-your-pangenome">Alon Schaiber’s example
+code</a>
+to our data. The core program involved is
+<code class="highlighter-rouge">anvi-get-enriched-functions-per-pan-group</code>.</p>
+
+<p>Ultimately, this finds functions enriched in each group defined. Here,
+we defined groups as the three detected subgroups of H. parainfluenzae
+seen in the pangenome.</p>
+
+<p>Following the steps in Alon Schaiber’s guide, this pangenome for Rothia
+displaying functions was created. <img src="/Users/dutter/g3/oral_genomes_analysis/figs_pretty/pfam_functions_for_Rothia_isolates_HMP.pdf" alt="creating this
+pangenome" /></p>
+
+<p>As expected, many of the singleton accessory genome drops off, and the
+relative representation of the core genome is much larger since core
+genes are typically more studied and thus presumably better annotated.
+But, the overall relationship patterns between genomes are visually
+similar.</p>
+
+<p>To count up the functions by gene clusters, to identify places where the
+same function was split across multiple gene clusters (particularly if
+that split matched species groups, e.g., if anvi’o made three dnaK gene
+clusters, one for each species’ dnaK), we branched off from this
+workflow. When we ran <code class="highlighter-rouge">anvi-summarize</code> on the pangenomes above, they
+produced files named like
+<code class="highlighter-rouge">Haemophilus-isolates-td-PAN-SUMMARY/Haemophilus-isolates-td_gene_clusters_summary.txt</code>
+that among other things report the annotation for each gene and which
+gene cluster to which that gene belongs. From this, we can count up how
+many times each function was found, by core or accessory set. Here is
+the Python we used to parse this file:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="n">summaryPath</span> <span class="o">=</span> <span class="s">'Haemophilus-isolates-td-PAN-SUMMARY/Haemophilus-isolates-td_gene_clusters_summary.txt'</span>
+
+<span class="n">summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">summaryPath</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s">'ProDom_ACC'</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="s">'ProDom'</span><span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
+
+<span class="n">summary</span> <span class="o">=</span> <span class="n">summary</span><span class="p">[[</span><span class="s">'gene_cluster_id'</span><span class="p">,</span><span class="s">'bin_name'</span><span class="p">,</span><span class="s">'functional_homogeneity_index'</span><span class="p">,</span><span class="s">'geometric_homogeneity_index'</span><span class="p">,</span> <span class="s">'TIGRFAM'</span><span class="p">,</span><span class="s">'Pfam'</span><span class="p">]]</span>
+
+<span class="n">summary</span> <span class="o">=</span> <span class="n">summary</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">summary</span><span class="p">[</span><span class="s">'Pfam'</span><span class="p">])]</span>
+
+
+<span class="n">funcCounts</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">pfam</span> <span class="ow">in</span> <span class="n">summary</span><span class="p">[</span><span class="s">'Pfam'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">subPfam</span> <span class="o">=</span> <span class="n">summary</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">summary</span><span class="p">[</span><span class="s">'Pfam'</span><span class="p">]</span> <span class="o">==</span> <span class="n">pfam</span><span class="p">]</span>
+    <span class="k">for</span> <span class="nb">bin</span> <span class="ow">in</span> <span class="n">subPfam</span><span class="p">[</span><span class="s">'bin_name'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+        <span class="n">subPfamsubBin</span> <span class="o">=</span> <span class="n">subPfam</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">subPfam</span><span class="p">[</span><span class="s">'bin_name'</span><span class="p">]</span> <span class="o">==</span> <span class="nb">bin</span><span class="p">]</span>
+        <span class="n">gcIDsUnique</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">subPfamsubBin</span><span class="p">[</span><span class="s">'gene_cluster_id'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'bin_name'</span><span class="p">:</span> <span class="p">[</span><span class="nb">bin</span><span class="p">],</span> <span class="s">'Pfam'</span><span class="p">:</span> <span class="p">[</span><span class="n">pfam</span><span class="p">],</span> <span class="s">'num_uniq_gcs'</span><span class="p">:</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">gcIDsUnique</span><span class="p">)],</span>
+                                <span class="s">'uniq_gc_ids'</span><span class="p">:</span> <span class="p">[</span><span class="s">','</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">gcIDsUnique</span><span class="p">)]})</span>
+        <span class="n">funcCounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">funcCounts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">funcCounts</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">funcCounts</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">summaryPath</span> <span class="o">+</span> <span class="s">"-homogeneity.tsv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This produced a slimmed-down table with only the relevant information,
+but it was still difficult to conceptualize all these data. We plotted
+this info, as well as turned it into a wide-format table, giving a
+breakdown, for each function, how many gene clusters existed, and what
+set of core genes to which they belonged (e.g., genus core, aeria +
+dentocariosa core, singleton accessory genome, etc.).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># plot pfam redundancy of GCs for rothia metapangenome</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">reshape2</span><span class="p">)</span><span class="w">
+
+</span><span class="n">funcCounts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s1">'Rothia-isolates-HMP_gene_clusters_summary.txt-homogeneity.tsv'</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\t"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">funcCounts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">funcCounts</span><span class="p">[,</span><span class="o">!</span><span class="p">(</span><span class="n">colnames</span><span class="p">(</span><span class="n">funcCounts</span><span class="p">)</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="s2">"X"</span><span class="p">)]</span><span class="w">
+
+</span><span class="n">coreCols</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">setNames</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s1">'green'</span><span class="p">,</span><span class="s1">'blue'</span><span class="p">,</span><span class="s1">'turquoise'</span><span class="p">,</span><span class="s1">'black'</span><span class="p">,</span><span class="s1">'pink'</span><span class="p">,</span><span class="s1">'purple'</span><span class="p">,</span><span class="s1">'orchid'</span><span class="p">,</span><span class="s1">'magenta'</span><span class="p">,</span><span class="s1">'grey80'</span><span class="p">,</span><span class="s1">'grey50'</span><span class="p">),</span><span class="n">levels</span><span class="p">(</span><span class="n">funcCounts</span><span class="o">$</span><span class="n">bin_name</span><span class="p">))</span><span class="w">
+
+</span><span class="n">funcCounts</span><span class="o">$</span><span class="n">Pfam</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">funcCounts</span><span class="o">$</span><span class="n">Pfam</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unique</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">funcCounts</span><span class="o">$</span><span class="n">Pfam</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">funcCounts</span><span class="o">$</span><span class="n">bin_name</span><span class="p">)])))</span><span class="w">  </span><span class="c1"># make cores clump</span><span class="w">
+</span><span class="n">funcCounts</span><span class="o">$</span><span class="n">Pfam</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">funcCounts</span><span class="o">$</span><span class="n">Pfam</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">rev</span><span class="p">(</span><span class="n">sort</span><span class="p">(</span><span class="n">tapply</span><span class="p">(</span><span class="n">funcCounts</span><span class="o">$</span><span class="n">num_uniq_gcs</span><span class="p">,</span><span class="w"> </span><span class="n">funcCounts</span><span class="o">$</span><span class="n">Pfam</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">)))))</span><span class="w">  </span><span class="c1"># order by decreasing total GC count</span><span class="w">
+
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">funcCounts</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pfam</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num_uniq_gcs</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+    </span><span class="n">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'identity'</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'stack'</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bin_name</span><span class="p">),</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+    </span><span class="n">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+    </span><span class="n">scale_fill_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coreCols</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">labs</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Num. gene clusters"</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Bin'</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+    </span><span class="n">theme</span><span class="p">(</span><span class="n">panel.grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">(),</span><span class="w"> </span><span class="n">panel.background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_rect</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'black'</span><span class="p">),</span><span class="w"> </span><span class="n">axis.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'black'</span><span class="p">),</span><span class="w">
+          </span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="metapan_narrative_files/figure-markdown_github/unnamed-chunk-15-1.png" alt="" /></p>
+
+<p>And here is what the top of the table looks like:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">funcTable</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dcast</span><span class="p">(</span><span class="n">funcCounts</span><span class="p">,</span><span class="w"> </span><span class="n">Pfam</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">bin_name</span><span class="p">,</span><span class="w"> </span><span class="n">value.var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'num_uniq_gcs'</span><span class="p">)</span><span class="w">
+</span><span class="n">funcTable</span><span class="p">[</span><span class="nf">is.na</span><span class="p">(</span><span class="n">funcTable</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+
+</span><span class="n">head</span><span class="p">(</span><span class="n">funcTable</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##                                                                   Pfam a_452
+## 1                                                      ABC transporter     3
+## 2                                      Pentapeptide repeats (9 copies)     5
+## 3                                        Major Facilitator Superfamily     1
+## 4                                                           AAA domain     3
+## 5                                              Helix-turn-helix domain     1
+## 6                           Bacterial regulatory proteins, tetR family     1
+## 7                                              S-layer homology domain     4
+## 8               Type I restriction modification DNA specificity domain     0
+## 9                                                           RHS Repeat     0
+## 10                                                   N-6 DNA Methylase     0
+## 11                                       Glycosyl transferase family 2     1
+## 12                                                        AIPR protein     0
+## 13                            Type III restriction enzyme, res subunit     0
+## 14                                          Zinc-binding dehydrogenase     0
+## 15                                                        NUDIX domain     0
+## 16                                     Acetyltransferase (GNAT) family     2
+## 17                                                   AAA ATPase domain     0
+## 18                                                       DNA methylase     0
+## 19                                                  AMP-binding enzyme     0
+## 20                                            Methyltransferase domain     0
+## 21                                    Excalibur calcium-binding domain     4
+## 22                                       Glycosyl transferases group 1     2
+## 23                                              Acyltransferase family     2
+## 24 Binding-protein-dependent transport system inner membrane component     0
+## 25                                                    Helix-turn-helix     0
+## 26                                           alpha/beta hydrolase fold     0
+## 27                                                      Fic/DOC family     1
+## 28                                                         MarR family     1
+## 29                                  Protein of unknown function DUF262     0
+## 30                                                    HNH endonuclease     0
+##    d_267 da_204 g_1130 m1_39 m2_38 m3_22 mAll_205 s_1371 UNBINNED_ITEMS_BIN
+## 1      0      3     27     0     0     0        3      0                 28
+## 2      0      0      0     0     0     0        0      9                 36
+## 3      0      2      7     0     0     0        1      2                 21
+## 4      2      0      7     0     0     0        1      7                  9
+## 5      0      1      4     0     0     0        1      3                 19
+## 6      2      4      6     0     0     0        1      2                 11
+## 7      4      0      2     1     0     0        5      0                 11
+## 8      0      0      0     0     0     1        0     12                 13
+## 9      0      0      0     0     0     0        0      5                 18
+## 10     0      0      0     0     0     0        0      3                 18
+## 11     1      1      8     0     0     0        0      0                  8
+## 12     0      0      0     0     0     0        0      8                  6
+## 13     0      0      2     0     0     0        0      2                  9
+## 14     0      3      6     0     0     0        0      0                  4
+## 15     0      1     10     0     0     0        0      0                  2
+## 16     1      3      3     0     0     0        0      0                  4
+## 17     0      0      0     0     0     0        0      4                  8
+## 18     0      0      1     0     0     0        0      3                  8
+## 19     0      0      8     0     0     0        0      3                  1
+## 20     0      2      3     0     0     0        0      2                  5
+## 21     2      0      0     0     0     0        2      0                  4
+## 22     0      0      8     0     0     0        0      0                  2
+## 23     0      1      2     0     0     0        0      0                  7
+## 24     0      0      5     0     0     0        1      0                  5
+## 25     0      1      0     0     0     0        0      3                  7
+## 26     1      1      2     0     0     0        0      1                  6
+## 27     0      0      0     0     0     0        0      0                 10
+## 28     0      3      1     0     0     0        0      2                  4
+## 29     0      0      0     0     0     0        0      6                  4
+## 30     0      0      0     0     0     0        0      3                  7
+</code></pre></div></div>
+
+<h2 id="granular-analysis-of-mapping-results-at-the-per-gene-per-sample-level">Granular analysis of mapping results at the per-gene, per-sample level</h2>
+
+<p>To get a better idea of what the per-gene coverages looked like along
+with the metapangenomes, we extracted the per-gene coverage information
+for each genome. This is what generated Figure 4A (so switching to the
+Rothia dataset for this example code). This was actually done in the
+background in <code class="highlighter-rouge">anvi-meta-pan-genome</code> and can be done ad-hoc with
+<code class="highlighter-rouge">anvi-interactive --gene-mode</code>, but we needed more control for
+formatting and miscellaneous data so we re-gathered the nucleotide-level
+coverage information per genome, and stored this information
+individually. We used the following script to collect and organize the
+data:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c">#SBATCH -N 1 #1 nodes of ram</span>
+<span class="c">#SBATCH -n 1 # 1 cores from each</span>
+<span class="c">#SBATCH --contiguous</span>
+<span class="c">#SBATCH --mem=24G #per node</span>
+<span class="c">#SBATCH -t 0-5:00:00</span>
+<span class="c">#SBATCH -p shared</span>
+<span class="c">#SBATCH --array=0-68%69</span>
+<span class="c">#SBATCH --job-name="MP-$target"</span>
+<span class="c">#SBATCH -o odyssey_meta-$target.out</span>
+<span class="c">#SBATCH -e odyssey_meta-$target.err</span>
+<span class="c">#SBATCH --mail-type=NONE</span>
+
+<span class="nv">taxPrefix</span><span class="o">=</span><span class="s2">"Rothia-isolates"</span>
+
+<span class="c">### RUN THESE 2 LINES FIRST</span>
+<span class="c">#mkdir genomesMapped</span>
+<span class="c">#awk '{print $2}' $taxPrefix-renaming-manual.tsv | uniq | split -l 1 -d -a 3 - genomesMapped/genome-</span>
+
+<span class="nb">cd </span>genomesMapped
+
+<span class="nv">taskNum</span><span class="o">=</span><span class="si">$(</span><span class="nb">printf</span> %03d <span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="si">)</span>
+
+<span class="c"># which genome this batch is targeting</span>
+<span class="nv">target</span><span class="o">=</span><span class="si">$(</span><span class="nb">cat </span>genome-<span class="nv">$taskNum</span><span class="si">)</span>
+
+<span class="c"># activate anvio</span>
+<span class="nb">source</span> ~/virtual-envs/anvio-dev-venv/bin/activate
+
+<span class="c">## for each habitat, make a dir, enter, get this genome's coverage and detection info, then go back up one level to do them all</span>
+<span class="nb">mkdir</span> <span class="nv">$target</span><span class="nt">-TD</span>
+<span class="nb">cd</span> <span class="nv">$target</span><span class="nt">-TD</span>
+anvi-script-gen-distribution-of-genes-in-a-bin <span class="nt">-c</span> ../../<span class="nv">$taxPrefix</span><span class="nt">-CONTIGS</span>.db <span class="nt">-p</span> ../../<span class="nv">$taxPrefix</span><span class="nt">-td-MERGED</span>/PROFILE.db <span class="nt">-C</span> Genomes <span class="nt">-b</span> <span class="nv">$target</span> <span class="nt">--fraction-of-median-coverage</span> 0.25
+<span class="nb">cd</span> ..
+
+<span class="nb">mkdir</span> <span class="nv">$target</span><span class="nt">-PQ</span>
+<span class="nb">cd</span> <span class="nv">$target</span><span class="nt">-PQ</span>
+anvi-script-gen-distribution-of-genes-in-a-bin <span class="nt">-c</span> ../../<span class="nv">$taxPrefix</span><span class="nt">-CONTIGS</span>.db <span class="nt">-p</span> ../../<span class="nv">$taxPrefix</span><span class="nt">-supp-MERGED</span>/PROFILE.db <span class="nt">-C</span> Genomes <span class="nt">-b</span> <span class="nv">$target</span> <span class="nt">--fraction-of-median-coverage</span> 0.25
+<span class="nb">cd</span> ..
+
+<span class="nb">mkdir</span> <span class="nv">$target</span><span class="nt">-BM</span>
+<span class="nb">cd</span> <span class="nv">$target</span><span class="nt">-BM</span>
+anvi-script-gen-distribution-of-genes-in-a-bin <span class="nt">-c</span> ../../<span class="nv">$taxPrefix</span><span class="nt">-CONTIGS</span>.db <span class="nt">-p</span> ../../<span class="nv">$taxPrefix</span><span class="nt">-bm-MERGED</span>/PROFILE.db <span class="nt">-C</span> Genomes <span class="nt">-b</span> <span class="nv">$target</span> <span class="nt">--fraction-of-median-coverage</span> 0.25
+<span class="nb">cd</span> ..
+</code></pre></div></div>
+
+<p>This script was run the top level directory, where all the other files
+have been made. Note that this is an array, so the two commented out
+lines (<code class="highlighter-rouge">mkdir</code> and <code class="highlighter-rouge">awk</code>) were run first as one-liners to set everything
+up. This script then creates a bunch of batch information inside that
+genomesMapped directory, which will also have 3 directories for each
+genome, one for each habitat. The <code class="highlighter-rouge">--fraction-of-median-coverage</code>
+parameter was kept at <code class="highlighter-rouge">0.25</code>, identical to the metapangenome calculation
+above.</p>
+
+<p>This output of this script made separate directories for each genome for
+each site. Ideally, we would select the top N samples (top being
+determined by highest mean or median coverage) from each site for each
+genome and combine into a single figure, along with the environmental
+core/accessory designations for each gene from each habitat. So we wrote
+a helper python script to help with the merging:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python
+</span>
+<span class="kn">from</span> <span class="nn">optparse</span> <span class="kn">import</span> <span class="n">OptionParser</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">OptionParser</span><span class="p">()</span>
+<span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+<span class="n">fileRoot</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">keep</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># load coverages
+</span><span class="n">covs_td</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"../"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-TD/"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-GENE-COVs.txt"</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">covs_bm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"../"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-BM/"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-GENE-COVs.txt"</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">covs_supp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"../"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-PQ/"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-GENE-COVs.txt"</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="c1"># load detections
+</span><span class="n">det_td</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"../"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-TD/"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-ENV-DETECTION.txt"</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">det_bm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"../"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-BM/"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-ENV-DETECTION.txt"</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">det_supp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"../"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-PQ/"</span><span class="o">+</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-ENV-DETECTION.txt"</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="n">det_td</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">'TD_detection'</span>
+<span class="n">det_bm</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">'BM_detection'</span>
+<span class="n">det_supp</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">'SUPP_detection'</span>
+
+<span class="c1"># sort by max median coverage
+</span><span class="n">covs_td</span> <span class="o">=</span> <span class="n">covs_td</span><span class="o">.</span><span class="n">reindex_axis</span><span class="p">(</span><span class="n">covs_td</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">covs_bm</span> <span class="o">=</span> <span class="n">covs_bm</span><span class="o">.</span><span class="n">reindex_axis</span><span class="p">(</span><span class="n">covs_bm</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">covs_supp</span> <span class="o">=</span> <span class="n">covs_supp</span><span class="o">.</span><span class="n">reindex_axis</span><span class="p">(</span><span class="n">covs_supp</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># add in sites to samples
+</span><span class="n">covs_td</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="s">"-TD"</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">covs_td</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>
+<span class="n">covs_bm</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="s">"-BM"</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">covs_bm</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>
+<span class="n">covs_supp</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="s">"-SUPP"</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">covs_supp</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>
+
+<span class="c1"># make the new coverages
+</span><span class="n">covs_keep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">covs_td</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:(</span><span class="n">keep</span><span class="o">+</span><span class="mi">1</span><span class="p">)],</span> <span class="n">covs_bm</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:(</span><span class="n">keep</span><span class="o">+</span><span class="mi">1</span><span class="p">)],</span> <span class="n">covs_supp</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:(</span><span class="n">keep</span><span class="o">+</span><span class="mi">1</span><span class="p">)]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">det_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">det_td</span><span class="p">,</span> <span class="n">det_bm</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">det_supp</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># save it
+</span><span class="n">covs_keep</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-GENE-COVs.txt-COMBO-"</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">keep</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">det_all</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">"-ENV-DETECTION.txt-COMBO-"</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">keep</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="n">keys</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">covs_keep</span><span class="p">[</span><span class="s">'key'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"synteny.txt"</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"RUN_ME_FOR_ANVIO"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"anvi-interactive -P 8081 --manual --title '{0}' -d {0}-GENE-COVs.txt-COMBO-{1} -A {0}-ENV-DETECTION.txt-COMBO-{1} -p {0}-PROFILE.db --items-order synteny.txt"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">keep</span><span class="p">))</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">chmod</span><span class="p">(</span><span class="s">"RUN_ME_FOR_ANVIO"</span><span class="p">,</span> <span class="mo">0o755</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>We had this script as <code class="highlighter-rouge">indivMetaCombiner.py</code> in the appropriate
+directory and ran it like so
+<code class="highlighter-rouge">./indivMetaCombiner.py Rothia_sp_HMSC061E04_HMSC061E04 30</code>, where the
+first argument is the file prefix for the earlier environmental
+detection output, which also happens to be the name of the genome, and
+the second argument is the number of samples to include (N), taking the
+N with the highest median coverage across samples for that habitat. We
+chose median, since mean could be biased by one outlier gene (e.g. 16S)
+picking up reads, and are not interested in high coverage by that
+reason.</p>
+
+<h2 id="differential-function-analysis">Differential function analysis</h2>
+
+<p>To investigate potential functional drivers affecting the different
+tropisms evidenced by <em>H. parainfluenzae</em> strains, we assigned each
+genome into the three genomic groups observed from the metapangenome
+(Figure 2 in text) and looked for functions enriched in a particular
+group relative to the other groups.</p>
+
+<p>Here is the file showing each genome’s assignments:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>layer   habitat
+Haemophilus_parainfluenzae_C2004002727  Group3
+Haemophilus_parainfluenzae_ATCC_9796    Group3
+Haemophilus_parainfluenzae_C2005004058  Group3
+Haemophilus_parainfluenzae_UMB0748      Group3
+Haemophilus_parainfluenzae_C2006002596  Group3
+Haemophilus_parainfluenzae_CCUG_58848   Group3
+Haemophilus_parainfluenzae_488_HPAR     Group3
+Haemophilus_parainfluenzae_ATCC_33392_v1        Group3
+Haemophilus_parainfluenzae_ATCC_33392_v2        Group3
+Haemophilus_parainfluenzae_174_HPAR     Group3
+Haemophilus_parainfluenzae_137_HINF     Group3
+Haemophilus_parainfluenzae_HK2019_HK2019        Group3
+Haemophilus_parainfluenzae_HK262_HK262  Group3
+Haemophilus_parainfluenzae_CCUG_62654   Group3
+Haemophilus_parainfluenzae_CCUG_62655   Group3
+Haemophilus_parainfluenzae_C2004000280  Group2
+Haemophilus_parainfluenzae_C2004002729  Group2
+Haemophilus_parainfluenzae_901_HPAR     Group2
+Haemophilus_parainfluenzae_432_HPAR     Group2
+Haemophilus_parainfluenzae_146_HPAR     Group2
+Haemophilus_parainfluenzae_209_HPAR     Group2
+Haemophilus_parainfluenzae_T3T1_T3T1    Group2
+Haemophilus_parainfluenzae_215035_2_ISO5        Group2
+Haemophilus_parainfluenzae_C2008001710  Group2
+Haemophilus_parainfluenzae_C2008003258  Group1
+Haemophilus_parainfluenzae_C2009038101  Group1
+Haemophilus_parainfluenzae_C2011020591  Group1
+Haemophilus_parainfluenzae_60884_B_Hi_2 Group1
+Haemophilus_parainfluenzae_65114_B_Hi_3 Group1
+Haemophilus_parainfluenzae_777_HPAR     Group1
+Haemophilus_parainfluenzae_155_HPAR     Group1
+Haemophilus_parainfluenzae_1128_HPAR    Group1
+Haemophilus_parainfluenzae_1209_HPAR    Group1
+</code></pre></div></div>
+
+<p>We called this <code class="highlighter-rouge">habitat_groups.txt</code> and then loaded it into the anvi’o
+pangenomes DB with</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anvi-import-misc-data -p Haemophilus-isolates-td-PAN/Haemophilus-isolates-td-PAN.db -t layers habitat_groups.txt
+</code></pre></div></div>
+
+<p>We then used the <code class="highlighter-rouge">anvi-get-enriched-functions-per-pan-group</code> command for
+both Pfam and TIGRfam annotations in the following way:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anvi-get-enriched-functions-per-pan-group -p Haemophilus-isolates-td-PAN/Haemophilus-isolates-td-PAN.db -g Haemophilus-isolates-td-GENOMES.db --category habitat --annotation-source TIGRFAM -o Haemophilus-isolates-enriched-functions-habitat-tigr.txt
+</code></pre></div></div>
+
+<p>This produces Supplemental Data 2 (TIGRFAM). Note that this snippet is
+specifically for TIGRFAMs, we ran it also again with
+<code class="highlighter-rouge">--annotation-source Pfam</code> to get a table of differential Pfam
+functions.</p>
+
+<h2 id="nucleotide-level-coverage-plots-figure-4a-4b">Nucleotide level coverage plots (Figure 4A, 4B)</h2>
+
+<p>Visually inspecting the nucleotide level coverage over genes of interest
+is crucial for determining whether the gene or contig is well-behaved,
+and thus whether any resulting summary coverage values are trustworthy.</p>
+
+<h4 id="rothia-candidate-driver-of-adaptation-to-bm">Rothia candidate driver of adaptation to BM</h4>
+
+<p>After identifying a candidate driver of habitat specificity (see above),
+we used the interactive anvio interface <code class="highlighter-rouge">anvi-interactive</code> with
+<code class="highlighter-rouge">--gene-mode</code> to identify the contig and split from which the gene came.</p>
+
+<p>For each oral habitat, we exported the coverage using</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anvi-get-split-coverages -p $prefix-$site-MERGED/PROFILE.db -C Genomes -b Rothia_sp_HMSC061E04_HMSC061E04 -o rot_split_cov-ALL-$site.tsv
+</code></pre></div></div>
+
+<p>changing the path as needed for each habitat’s data.</p>
+
+<p>Then, similarly adjusting the path to specify each habitat, we obtained
+the sequence variants mapped from the metagenome for each nucleotide
+position for the contig.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anvi-gen-variability-profile -c $prefix-CONTIGS.db -p $prefix-$site-MERGED/PROFILE.db -C Genomes -b Rothia_sp_HMSC061E04_HMSC061E04 -o rot_split_cov-ALL-variability-$site.tsv
+</code></pre></div></div>
+
+<p>To link genes to split-based coverage, we exported the table listing the
+split-based start/stop positions for each gene with sqlite, like so:
+<code class="highlighter-rouge">sqlite3 Haemophilus-isolates-CONTIGS.db 'PRAGMA table_info(genes_in_splits)' | awk -F"|" '{print $2}' | tr '\n' '|' | sed "s/|$//" &gt; Rothia-isolates-splits-genes.txt</code>
+<code class="highlighter-rouge">sqlite3 Rothia-isolates-CONTIGS.db 'SELECT * from genes_in_splits' &gt;&gt; Rothia-isolates-splits-genes.txt</code></p>
+
+<p>With these inputs, we can plot per-nucleotide coverage from the
+metagenomes on a window around a focal gene, as in Figure 4b.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">reshape2</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">entropy</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># read in and pre-process variability information</span><span class="w">
+</span><span class="n">getVariability</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">sites</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s1">'TD'</span><span class="p">,</span><span class="s1">'BM'</span><span class="p">,</span><span class="s1">'SUPP'</span><span class="p">),</span><span class="w"> </span><span class="n">pos.min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">pos.max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">999999</span><span class="p">,</span><span class="w"> </span><span class="n">min_coverage</span><span class="o">=</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">all</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">()</span><span class="w">
+
+    </span><span class="c1"># iteratively load and attach row-wise</span><span class="w">
+    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">site</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">sites</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="s2">"variability-"</span><span class="p">,</span><span class="w"> </span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="s1">'.tsv'</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\t"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+        
+        </span><span class="c1"># only keep variability info for sites with &gt; 10x coverage</span><span class="w">
+        </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">$</span><span class="n">coverage</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">min_coverage</span><span class="p">,]</span><span class="w">
+        
+        </span><span class="c1"># get entropy across samples and lose junk</span><span class="w">
+        </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">group_by</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">split_name</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">summarise</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="nf">sum</span><span class="p">(</span><span class="n">A</span><span class="p">),</span><span class="w"> </span><span class="n">c</span><span class="o">=</span><span class="nf">sum</span><span class="p">(</span><span class="n">C</span><span class="p">),</span><span class="w"> </span><span class="n">t</span><span class="o">=</span><span class="nf">sum</span><span class="p">(</span><span class="nb">T</span><span class="p">),</span><span class="w"> </span><span class="n">g</span><span class="o">=</span><span class="nf">sum</span><span class="p">(</span><span class="n">G</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">  </span><span class="c1"># collapse so have split, position in split, and sum of samples</span><span class="w">
+          </span><span class="n">group_by</span><span class="p">(</span><span class="n">split_name</span><span class="p">,</span><span class="n">pos</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">summarise</span><span class="p">(</span><span class="n">entropy</span><span class="o">=</span><span class="n">entropy.empirical</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">g</span><span class="p">),</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'log2'</span><span class="p">))</span><span class="w">  </span><span class="c1"># regroup to keep split &amp; pos, then entropy across all samples</span><span class="w">
+        
+        </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="w">
+        
+        </span><span class="n">df</span><span class="o">$</span><span class="n">site</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">toupper</span><span class="p">(</span><span class="n">site</span><span class="p">)</span><span class="w">
+
+        </span><span class="n">all</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rbind</span><span class="p">(</span><span class="n">all</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="p">)</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="c1"># subset if requested</span><span class="w">
+    </span><span class="n">all</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all</span><span class="p">[(</span><span class="n">all</span><span class="o">$</span><span class="n">pos</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">pos.min</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">all</span><span class="o">$</span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">pos.max</span><span class="p">),]</span><span class="w">
+
+    </span><span class="n">all</span><span class="o">$</span><span class="n">site</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">all</span><span class="o">$</span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"SUPP"</span><span class="p">,</span><span class="s2">"BM"</span><span class="p">,</span><span class="s2">"TD"</span><span class="p">))</span><span class="w">
+
+    </span><span class="nf">return</span><span class="p">(</span><span class="n">all</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+
+</span><span class="n">getCoverages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">sites</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s1">'TD'</span><span class="p">,</span><span class="s1">'BM'</span><span class="p">,</span><span class="s1">'SUPP'</span><span class="p">),</span><span class="w"> </span><span class="n">pos.min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">pos.max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">999999</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">all</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">()</span><span class="w">
+
+    </span><span class="c1"># iteratively load and attach row-wise</span><span class="w">
+    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">site</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">sites</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="s1">'.tsv'</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\t"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="c1">#, nrows = 1000000)</span><span class="w">
+        </span><span class="n">colnames</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"unique_pos_id"</span><span class="p">,</span><span class="s2">"nt_position"</span><span class="p">,</span><span class="s2">"split_id"</span><span class="p">,</span><span class="s2">"sample_name"</span><span class="p">,</span><span class="s2">"coverage"</span><span class="p">)</span><span class="w">
+        
+        </span><span class="n">df</span><span class="o">$</span><span class="n">site</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">toupper</span><span class="p">(</span><span class="n">site</span><span class="p">)</span><span class="w">
+
+        </span><span class="n">all</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rbind</span><span class="p">(</span><span class="n">all</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="p">)</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="nf">return</span><span class="p">(</span><span class="n">all</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1"># THIS FIGURES OUT WHICH SPLITS NEED COVERAGE - doing this first to reduce filesize of the covs file(s)</span><span class="w">
+</span><span class="n">findSpecificSplits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">geneID</span><span class="o">=</span><span class="s2">"104649"</span><span class="p">,</span><span class="w"> </span><span class="n">genes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  
+  </span><span class="c1"># find what contig the gene is on</span><span class="w">
+  </span><span class="n">splitName</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">genes</span><span class="o">$</span><span class="n">split</span><span class="p">[</span><span class="n">genes</span><span class="o">$</span><span class="n">gene_callers_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">geneID</span><span class="p">]</span><span class="w">
+  </span><span class="n">splitNum</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unlist</span><span class="p">(</span><span class="n">strsplit</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">splitName</span><span class="p">),</span><span class="w"> </span><span class="s2">"_"</span><span class="p">))[</span><span class="m">4</span><span class="p">]</span><span class="w">
+  </span><span class="n">splitBody</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unlist</span><span class="p">(</span><span class="n">strsplit</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">splitName</span><span class="p">),</span><span class="w"> </span><span class="s2">"_"</span><span class="p">))[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
+  
+  </span><span class="c1"># get adjacent splits too just in case it's on edge of split (same contig, though)</span><span class="w">
+  </span><span class="n">adjacentSplits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sprintf</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">splitBody</span><span class="p">,</span><span class="w"> </span><span class="s2">"%05s"</span><span class="p">),</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"_"</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">splitNum</span><span class="p">)</span><span class="m">-1</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">splitNum</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
+    
+  
+  </span><span class="n">splits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unique</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">genes</span><span class="o">$</span><span class="n">split</span><span class="p">[</span><span class="n">genes</span><span class="o">$</span><span class="n">split</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">adjacentSplits</span><span class="p">]))</span><span class="w">
+  
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">splits</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">plotCovsAndGenes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">covs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getCoverages</span><span class="p">(),</span><span class="w"> </span><span class="n">genes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getGeneCalls</span><span class="p">(),</span><span class="w"> </span><span class="n">surroundingGenes</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">prefix</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">variability</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NULL</span><span class="p">,</span><span class="w">
+                             </span><span class="n">tax</span><span class="p">,</span><span class="w"> </span><span class="n">splits</span><span class="p">,</span><span class="w"> </span><span class="n">keep_fraction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">site</span><span class="o">=</span><span class="s2">"TD"</span><span class="p">,</span><span class="w"> </span><span class="n">outputSuf</span><span class="o">=</span><span class="kc">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  
+  </span><span class="n">splitID</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">genes</span><span class="o">$</span><span class="n">split</span><span class="p">[</span><span class="n">genes</span><span class="o">$</span><span class="n">gene_callers_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">]</span><span class="w">
+    
+  </span><span class="n">workingCov</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">covs</span><span class="p">[</span><span class="n">grep</span><span class="p">(</span><span class="n">splitID</span><span class="p">,</span><span class="w"> </span><span class="n">covs</span><span class="o">$</span><span class="n">split_id</span><span class="p">),]</span><span class="w">
+
+  </span><span class="c1"># take n genes either side</span><span class="w">
+  </span><span class="n">workingGcs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">genes</span><span class="p">[(</span><span class="n">which</span><span class="p">(</span><span class="n">genes</span><span class="o">$</span><span class="n">gene_callers_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">surroundingGenes</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="n">genes</span><span class="o">$</span><span class="n">gene_callers_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">surroundingGenes</span><span class="p">),]</span><span class="w">
+
+  </span><span class="c1"># make sure they're all on same contig</span><span class="w">
+  </span><span class="n">workingGcs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">workingGcs</span><span class="p">[</span><span class="n">workingGcs</span><span class="o">$</span><span class="n">split</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">workingGcs</span><span class="o">$</span><span class="n">split</span><span class="p">[</span><span class="n">workingGcs</span><span class="o">$</span><span class="n">gene_callers_id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">],]</span><span class="w">
+
+  </span><span class="c1"># pull out window provided by GeneCaller positions</span><span class="w">
+  </span><span class="n">workingCov</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">workingCov</span><span class="p">[(</span><span class="n">workingCov</span><span class="o">$</span><span class="n">nt_position</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">workingGcs</span><span class="o">$</span><span class="n">start_in_split</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> 
+                             </span><span class="p">(</span><span class="n">workingCov</span><span class="o">$</span><span class="n">nt_position</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">workingGcs</span><span class="o">$</span><span class="n">stop_in_split</span><span class="p">[</span><span class="nf">length</span><span class="p">(</span><span class="n">workingGcs</span><span class="o">$</span><span class="n">stop_in_split</span><span class="p">)]),]</span><span class="w">
+  
+  </span><span class="n">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">workingCov</span><span class="p">))</span><span class="w">
+  
+  </span><span class="n">genes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">workingGcs</span><span class="w">
+  </span><span class="n">covs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">workingCov</span><span class="w">
+  
+    </span><span class="n">genes</span><span class="o">$</span><span class="n">site</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">site</span><span class="p">)</span><span class="w">
+    </span><span class="n">genes</span><span class="o">$</span><span class="n">gene_callers_id</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">genes</span><span class="o">$</span><span class="n">gene_callers_id</span><span class="p">)</span><span class="w">
+
+    </span><span class="n">geneColors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">setNames</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s2">"grey80"</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">genes</span><span class="p">)),</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">genes</span><span class="o">$</span><span class="n">gene_callers_id</span><span class="p">))</span><span class="w">
+    </span><span class="n">geneColors</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"#BA0000"</span><span class="w">
+    
+    </span><span class="c1">###############</span><span class="w">
+    </span><span class="c1"># drop variability info not in window, fix NAs to 0 for scaling</span><span class="w">
+    </span><span class="n">variability</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">variability</span><span class="p">[</span><span class="n">variability</span><span class="o">$</span><span class="n">split_name</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">unique</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">covs</span><span class="o">$</span><span class="n">split_id</span><span class="p">)),]</span><span class="w">
+    
+    </span><span class="c1"># sometimes chunk might not have variability and crash; only renormalize if kept any</span><span class="w">
+    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">variability</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">){</span><span class="w">
+      </span><span class="n">print</span><span class="p">(</span><span class="s2">"found variability; proceeding..."</span><span class="p">)</span><span class="w">
+      </span><span class="n">variability</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">variability</span><span class="p">[(</span><span class="n">variability</span><span class="o">$</span><span class="n">pos</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">covs</span><span class="o">$</span><span class="n">nt_position</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">variability</span><span class="o">$</span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">covs</span><span class="o">$</span><span class="n">nt_position</span><span class="p">)),]</span><span class="w">
+      </span><span class="n">variability</span><span class="o">$</span><span class="n">site</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">variability</span><span class="o">$</span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"SUPP"</span><span class="p">,</span><span class="s2">"BM"</span><span class="p">,</span><span class="s2">"TD"</span><span class="p">))</span><span class="w">
+      </span><span class="n">variability</span><span class="o">$</span><span class="n">entropy</span><span class="p">[</span><span class="nf">is.na</span><span class="p">(</span><span class="n">variability</span><span class="o">$</span><span class="n">entropy</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+      
+      </span><span class="c1"># multiply out coverage to get proportional SNPs</span><span class="w">
+      </span><span class="n">variability</span><span class="o">$</span><span class="n">entropyOrig</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">variability</span><span class="o">$</span><span class="n">entropy</span><span class="w">
+      </span><span class="n">variability</span><span class="o">$</span><span class="n">entropy</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">variability</span><span class="o">$</span><span class="n">entropy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">covs</span><span class="o">$</span><span class="n">coverage</span><span class="p">)</span><span class="o">/</span><span class="nf">max</span><span class="p">(</span><span class="n">variability</span><span class="o">$</span><span class="n">entropy</span><span class="p">))</span><span class="w">
+      
+      </span><span class="n">print</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">variability</span><span class="o">$</span><span class="n">entropyOrig</span><span class="p">))</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># make a dummy</span><span class="w">
+      </span><span class="n">print</span><span class="p">(</span><span class="s2">"no variability in this window; making a dummy"</span><span class="p">)</span><span class="w">
+      </span><span class="n">variability</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span><span class="w">
+      </span><span class="n">variability</span><span class="o">$</span><span class="n">site</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">site</span><span class="w">
+      </span><span class="n">variability</span><span class="o">$</span><span class="n">entropyOrig</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+
+  </span><span class="c1">#######</span><span class="w">
+    </span><span class="c1"># make the plot</span><span class="w">
+    </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">covs</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nt_position</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coverage</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'fixed'</span><span class="p">,</span><span class="w"> </span><span class="n">strip.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'right'</span><span class="p">,</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">geom_col</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">variability</span><span class="p">,</span><span class="w"> </span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'identity'</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'identity'</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entropy</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'black'</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">geom_line</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="n">sample_name</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">geom_hline</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">genes</span><span class="p">,</span><span class="w"> </span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.97</span><span class="o">*</span><span class="nf">max</span><span class="p">(</span><span class="n">covs</span><span class="o">$</span><span class="n">coverage</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'grey20'</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">geom_segment</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">genes</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">start_in_split</span><span class="p">,</span><span class="w"> </span><span class="n">xend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stop_in_split</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gene_callers_id</span><span class="p">),</span><span class="w"> 
+                     </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.99</span><span class="o">*</span><span class="nf">max</span><span class="p">(</span><span class="n">covs</span><span class="o">$</span><span class="n">coverage</span><span class="p">),</span><span class="w"> </span><span class="n">yend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.99</span><span class="o">*</span><span class="nf">max</span><span class="p">(</span><span class="n">covs</span><span class="o">$</span><span class="n">coverage</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Coverage"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">sec.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sec_axis</span><span class="p">(</span><span class="o">~</span><span class="n">.</span><span class="o">*</span><span class="nf">max</span><span class="p">(</span><span class="n">variability</span><span class="o">$</span><span class="n">entropyOrig</span><span class="p">)</span><span class="o">/</span><span class="nf">max</span><span class="p">(</span><span class="n">covs</span><span class="o">$</span><span class="n">coverage</span><span class="p">)))</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">setNames</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s2">"#2790db"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#b287e8"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#69d173"</span><span class="p">),</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"TD"</span><span class="p">,</span><span class="s2">"BM"</span><span class="p">,</span><span class="s2">"SUPP"</span><span class="p">)),</span><span class="w"> </span><span class="n">geneColors</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">guides</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+        </span><span class="n">theme</span><span class="p">(</span><span class="n">panel.grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">(),</span><span class="w"> </span><span class="n">axis.line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_line</span><span class="p">(</span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'black'</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">),</span><span class="w"> </span><span class="n">axis.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">colour</span><span class="o">=</span><span class="s1">'black'</span><span class="p">),</span><span class="w">
+              </span><span class="n">strip.text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="m">90</span><span class="p">),</span><span class="w"> </span><span class="n">axis.ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_line</span><span class="p">(</span><span class="n">colour</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">0.3</span><span class="p">))</span><span class="w">
+
+
+    </span><span class="c1"># did you give me a suffix to use to save it?</span><span class="w">
+    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.null</span><span class="p">(</span><span class="n">outputSuf</span><span class="p">)){</span><span class="w">
+        </span><span class="n">pdf</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span><span class="n">outputSuf</span><span class="p">,</span><span class="s2">".pdf"</span><span class="p">),</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="n">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w">
+
+    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nf">is.null</span><span class="p">(</span><span class="n">outputSuf</span><span class="p">)){</span><span class="w">
+        </span><span class="n">dev.off</span><span class="p">()</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">prefix</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s1">'~/g3/oral_genomes_analysis/rothia/rot_split_cov-ALL-'</span><span class="w">
+
+</span><span class="n">geneCallsPath</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s1">'Rothia-isolates-splits-genes.txt'</span><span class="w">
+
+</span><span class="n">tax</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s1">'R. muciaginosa E04'</span><span class="w">
+
+</span><span class="n">splitPosRelativeToContig</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">203284</span><span class="w"> </span><span class="c1"># rothia_buccal</span><span class="w">
+
+</span><span class="n">geneTarget</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"104283"</span><span class="p">,</span><span class="s2">"103512"</span><span class="p">,</span><span class="s2">"104082"</span><span class="p">,</span><span class="s2">"103409"</span><span class="p">,</span><span class="s2">"103186"</span><span class="p">,</span><span class="s2">"103758"</span><span class="p">,</span><span class="s2">"103125"</span><span class="p">,</span><span class="s2">"104483"</span><span class="p">,</span><span class="s2">"104321"</span><span class="p">,</span><span class="s2">"104823"</span><span class="p">,</span><span class="s2">"104402"</span><span class="p">,</span><span class="s2">"103432"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"104322"</span><span class="p">,</span><span class="s2">"104458"</span><span class="p">,</span><span class="s2">"104363"</span><span class="p">,</span><span class="s2">"103468"</span><span class="p">,</span><span class="s2">"103939"</span><span class="p">,</span><span class="s2">"103201"</span><span class="p">,</span><span class="s2">"104081"</span><span class="p">,</span><span class="s2">"104464"</span><span class="p">,</span><span class="s2">"104323"</span><span class="p">,</span><span class="s2">"103386"</span><span class="p">,</span><span class="s2">"104649"</span><span class="p">,</span><span class="s2">"103463"</span><span class="p">)</span><span class="w">  </span><span class="c1"># 24 e04 genes from 22 gcs</span><span class="w">
+
+
+</span><span class="c1"># get gene call positions</span><span class="w">
+</span><span class="n">gcs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">geneCallsPath</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s2">"|"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># then find out what splits needed</span><span class="w">
+</span><span class="n">splitsNeeded</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">gene</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">geneTarget</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+  </span><span class="n">splitsNeeded</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">splitsNeeded</span><span class="p">,</span><span class="w"> </span><span class="n">findSpecificSplits</span><span class="p">(</span><span class="n">geneID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gene</span><span class="p">,</span><span class="w"> </span><span class="n">genes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gcs</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">site</span><span class="o">=</span><span class="s1">'SUPP'</span><span class="w">
+
+</span><span class="c1"># get coverages</span><span class="w">
+</span><span class="n">cov</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getCoverages</span><span class="p">(</span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">pos.min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">pos.max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">Inf</span><span class="p">,</span><span class="w"> </span><span class="n">sites</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">site</span><span class="p">)</span><span class="w">
+</span><span class="c1"># and variability</span><span class="w">
+</span><span class="n">variability</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getVariability</span><span class="p">(</span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="n">sites</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="n">min_coverage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w">
+
+
+</span><span class="c1"># save each one</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">geneTarget</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">plotCovsAndGenes</span><span class="p">(</span><span class="n">covs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cov</span><span class="p">,</span><span class="w"> </span><span class="n">prefix</span><span class="o">=</span><span class="n">paste0</span><span class="p">(</span><span class="s1">'~/g3/oral_genomes_analysis/rothia/bm_gene_covs/20190826/E04_genes_'</span><span class="p">,</span><span class="n">site</span><span class="p">,</span><span class="w"> </span><span class="s2">"-"</span><span class="p">),</span><span class="w">
+                 </span><span class="n">genes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gcs</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geneTarget</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w">
+                 </span><span class="n">variability</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">variability</span><span class="p">,</span><span class="w">
+                 </span><span class="n">tax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tax</span><span class="p">,</span><span class="w"> </span><span class="n">splits</span><span class="o">=</span><span class="n">splitDF</span><span class="p">,</span><span class="w"> </span><span class="n">site</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">site</span><span class="p">,</span><span class="w">
+                 </span><span class="n">outputSuf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geneTarget</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="investigating-the-effect-of-non-specific-mapping">Investigating the effect of non-specific mapping</h3>
+
+<p>Regions of high nucleotide similarity between reference genomes relative
+to the metagenome thus recruit an equivalent number of reads reflecting
+the total population abundance in that sample. However, regions with
+polymorphic sites allow for discrimination between genomes based on the
+variability of sequences in the pangenome. By plotting the mean coverage
+per split (approx. 20kb segments of a contig) of genomes by sample,
+genomes with similar coverage patterns per sample can be seen,
+reflecting this pseudorandom assignment or nonspecific mapping, that is,
+mapping reads originating from non-target taxa in the metagenome onto
+the target genome(s) (Supplemental Figure S5). Close manual inspection
+revealed that despite some broad-stroke similarities, genomes with
+similar recruitment within a sample do recruit differently in other
+samples, suggesting that both potential mapping concerns do not drown
+out the biological signals from diverse populations. Inspection of
+coverage at the per-nucleotide level, e.g., Figure 4B and Supplemental
+Figure S3, confirmed that non-specific mapping produces a distinct
+signature of extremely spiky coverage that can be easily differentiated
+from the underlying signal. Thus, a particular sequence’s coverage
+reflects the representation of that sequence variant in that sample’s
+population.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-16T20:14:51-04:00">October 16, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Metapangenomics+of+%2ARothia%2A+and+%2AH.+parainfluenzae%2A%20http%3A%2F%2Flocalhost%3A4000%2Fprojects%2Foral_metapan" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fprojects%2Foral_metapan" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fprojects%2Foral_metapan" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/IdrD" class="pagination--pager" title="IdrD domain-level metagenome surveys
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Daniel Utter. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+---
+layout: archive
+author_profile: true
+
+header:
+  image: /assets/images/home_banner.svg
+---
+
+{{ content }}
+
+
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% for post in posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}

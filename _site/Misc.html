@@ -1,0 +1,444 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Essential ‘omics (bash / linux) - Daniel Utter</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="du">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Daniel Utter">
+<meta property="og:title" content="Essential ‘omics (bash / linux)">
+<meta property="og:url" content="http://localhost:4000/Misc">
+
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/home_banner.svg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/Misc">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Daniel Utter Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Daniel Utter
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/About/about.md">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/CV/CV.md">CV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Research/Research.md">Research</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Methods/methods.md">Reproducible Methods</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Misc/omics.md">Essential 'omics commands</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/assets/images/home_banner.svg" alt="Essential ‘omics (bash / linux)" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Essential ‘omics (bash / linux)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Essential ‘omics (bash / linux)
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#basic-reference-for-useful-omics-related-command-line">Basic reference for useful ‘omics-related command line</a>
+    <ul>
+      <li><a href="#potentially-confusing-vocab-symbols-and-syntax">Potentially confusing vocab, symbols, and syntax</a></li>
+      <li><a href="#navigation">Navigation</a></li>
+      <li><a href="#printing-file-contents-to-the-screen">Printing file contents to the screen</a></li>
+      <li><a href="#writing-and-modifying-files--directories">Writing and modifying files / directories</a></li>
+      <li><a href="#searching-and-manipulating-text">Searching and manipulating text</a>
+        <ul>
+          <li><a href="#grep">grep</a></li>
+          <li><a href="#awk">awk</a></li>
+          <li><a href="#others">Others</a></li>
+          <li><a href="#generic-one-liner-for-loops">Generic one-liner for loops:</a></li>
+          <li><a href="#useful-built-in-variables">Useful built-in variables</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#walkthrough--tutorial-resources">Walkthrough / Tutorial Resources:</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="basic-reference-for-useful-omics-related-command-line">Basic reference for useful ‘omics-related command line</h1>
+
+<p>A central reference guide of some essential bash programs and their microbiology-relevant uses can be really helpful for those first getting their feet wet with sequence data. This is all about lowering barriers to working with ‘omics datasets by making an easy cheat-sheet of common programs and their usage.</p>
+
+<p>Many different intro-to-coding and intro-to-bioinformatics tutorials online, some of which are incredibly detailed. This isn’t meant to be that, just a reference and usage guide. Some tutorials I like are linked at the bottom.</p>
+
+<h2 id="potentially-confusing-vocab-symbols-and-syntax">Potentially confusing vocab, symbols, and syntax</h2>
+<ul>
+  <li>special words: ‘directory’ is the same as ‘folder’</li>
+  <li>special characters:
+    <ul>
+      <li><code class="highlighter-rouge">\</code> : Means interpret next character literally if it’s a special character, or give a special meaning to next character if it’s not special yet.
+        <ul>
+          <li>A file with spaces, like <code class="highlighter-rouge">my file.txt</code> would need to be referred to as <code class="highlighter-rouge">my\ file.txt</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">\t</code> : tab character</li>
+      <li><code class="highlighter-rouge">\n</code> : newline character</li>
+      <li><code class="highlighter-rouge">^</code> : used in <a href="http://web.mit.edu/hackl/www/lab/turkshop/slides/regex-cheatsheet.pdf">regular expressions</a> to signify the start of a line, with tools like <code class="highlighter-rouge">sed</code> and <code class="highlighter-rouge">grep</code></li>
+      <li><code class="highlighter-rouge">$</code> : End of line marker, it is the counterpart of <code class="highlighter-rouge">^</code></li>
+      <li><code class="highlighter-rouge">.</code> : ‘here’ in the context of a filepath, or wildcard for ‘any character’ in a regular expression</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="navigation">Navigation</h2>
+<ul>
+  <li><code class="highlighter-rouge">pwd</code> : <strong>p</strong>rint <strong>w</strong>orking <strong>d</strong>irectory (print the path to where you are)</li>
+  <li><code class="highlighter-rouge">cd</code> : <strong>c</strong>hange <strong>d</strong>irectory (move to a different directory)
+    <ul>
+      <li>Use it like <code class="highlighter-rouge">cd DESTINATION</code> where DESTINATION is the path to where you want to go</li>
+      <li>There are two kinds of ways to tell how to get to DESTINATION, absolute and relative:
+        <ul>
+          <li>Absolute starts with a <code class="highlighter-rouge">/</code> character, signifying the path starts at the ‘root’ of the file structure. Like <code class="highlighter-rouge">cd /Users/rosalindfranklin/Documents</code></li>
+          <li>Relative is relative to current location, so <code class="highlighter-rouge">cd my_folder</code> would go to <code class="highlighter-rouge">my_folder</code> inside the current directory (if it exists, otherwise, error!) <code class="highlighter-rouge">..</code> is a special character that means move ‘up’ (towards the root) from where you are now, like <code class="highlighter-rouge">cd ../my_folder</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">ls</code> : <strong>l</strong>i<strong>s</strong>t contents of the current directory
+    <ul>
+      <li><code class="highlighter-rouge">ls --color=none</code> - Turn off colors</li>
+      <li><code class="highlighter-rouge">ls PATH</code> - List the contents of directory/file specified at PATH</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">*</code> : asterisks in file paths stands for any character, any number of times.
+    <ul>
+      <li>use with <code class="highlighter-rouge">ls</code> and other commands to specify multiple files, like <code class="highlighter-rouge">ls *txt</code> to list all the files in the current directory ending with <code class="highlighter-rouge">*txt</code>, but exclude the others</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="printing-file-contents-to-the-screen">Printing file contents to the screen</h2>
+<ul>
+  <li><code class="highlighter-rouge">head FILE</code> : print the <strong>first</strong> 10 lines of <em>FILE</em>, great way to peek at a big file</li>
+  <li><code class="highlighter-rouge">tail FILE</code> : print the <strong>last</strong> 10 lines of <em>FILE</em></li>
+  <li><code class="highlighter-rouge">more FILE</code> : print potentially all the lines of a file, one full terminal window at a time
+    <ul>
+      <li>Once <code class="highlighter-rouge">more</code> is run, pressing the space key will advance to the next page</li>
+      <li><code class="highlighter-rouge">q</code> quits the printing, returning to the command prompt</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">cat FILE1 [FILE2 FILE3]</code> - prints the whole file, very useful for con<strong>cat</strong>enating multiple files
+    <ul>
+      <li><code class="highlighter-rouge">cat</code> can take multiple files, like <code class="highlighter-rouge">cat my_file.txt my_other_file.txt</code> and it will print the first one, then the second one, etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="writing-and-modifying-files--directories">Writing and modifying files / directories</h2>
+<ul>
+  <li><code class="highlighter-rouge">&gt;</code> : redirects the output to a file instead of printing to the screen
+    <ul>
+      <li><code class="highlighter-rouge">cat my_file.txt my_other_file.txt &gt; combined.txt</code> concatenates two files, top of 2nd after bottom of 1st, into a file called <code class="highlighter-rouge">combined.txt</code></li>
+      <li>Will overwrite an existing file of the same name</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">&gt;&gt;</code> : Just like <code class="highlighter-rouge">&gt;</code> except it appends to the bottom of specified file, if it already exists, or creates it if it doesn’t exist already.</li>
+  <li><code class="highlighter-rouge">|</code> : the pipe character chains commands - the output of first command doesn’t get printed but is passed to next command.
+    <ul>
+      <li><code class="highlighter-rouge">cat FILE | head</code> first prints the entire contents of FILE using <code class="highlighter-rouge">cat</code>, but instead of printing it, the output gets passed to <code class="highlighter-rouge">head</code> which prints the first 10 lines of that.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">mkdir NAME</code> : make directory called NAME</li>
+  <li><code class="highlighter-rouge">mv SOMETHING DESTINATION</code> : move a file or directory at SOMETHING to DESTINATION.
+    <ul>
+      <li>Can rename a file or directory’s like <code class="highlighter-rouge">mv file.txt newname.txt</code> instead of moving it into a new directory</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">cp SOMETHING DESTINATION</code> : make a copy of file SOMETHING at DESTINATION</li>
+  <li><code class="highlighter-rouge">rm FILE [FILE2 FILE3]</code> : removes (deletes) FILE. <strong>BE CAREFUL -  THIS IS IRREVERSIBLE</strong>. Ensure you have filenames typed carefully and no unexpected asterisks or spaces to not accidentally delete everything on your computer. It’s happened…
+    <ul>
+      <li><code class="highlighter-rouge">rm -rf DIRECTORY</code> : the <code class="highlighter-rouge">-rf</code> tells it to delete directories and their contents too</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="searching-and-manipulating-text">Searching and manipulating text</h2>
+<h3 id="grep"><code class="highlighter-rouge">grep</code></h3>
+<ul>
+  <li><code class="highlighter-rouge">grep "SUBSTRING" FILE</code> : the command line version of find, searches for SUBSTRING in FILE and returns only lines that contain SUBSTRING. Some useful specific applications:</li>
+  <li><code class="highlighter-rouge">grep -c "&gt;" *fasta</code> : <code class="highlighter-rouge">-c</code> means ‘count’ instead of print, so this counts the number of sequences in each fasta file in the current directory</li>
+  <li><code class="highlighter-rouge">grep -A 1 "&gt;my_sequence" many_sequences.fasta</code> : <code class="highlighter-rouge">-A N</code> returns <code class="highlighter-rouge">N</code> lines after the match, so if <code class="highlighter-rouge">many_sequences.fasta</code> is nicely formatted, this will return the sequence named <code class="highlighter-rouge">my_sequence</code>
+    <ul>
+      <li>Like <code class="highlighter-rouge">-A</code>, <code class="highlighter-rouge">-B N</code> returns N lines before the match, and <code class="highlighter-rouge">-C N</code> returns N lines of context (before and after the match)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">grep -v "metazoan" organisms.txt</code> : <code class="highlighter-rouge">-v</code> means invert, so this returns all lines that DON’T contain “metazoan”</li>
+  <li><code class="highlighter-rouge">grep "THIS" FILE | grep "THAT"</code> : Chaining greps with a pipe is the equivalent of a logical AND; this returns lines containing <strong>both</strong> THIS and THAT</li>
+  <li><code class="highlighter-rouge">grep "THIS\|THAT" FILE</code> : <code class="highlighter-rouge">|</code> is a logical OR, but in grep it needs a <code class="highlighter-rouge">/</code> to signify that it is not a literal “|” character to match, so this command returns lines with THIS or THAT (or both)</li>
+</ul>
+
+<h3 id="awk"><code class="highlighter-rouge">awk</code></h3>
+<p>Think Microsoft Excel of the command line, very useful for tables and columnar data. Some examples:</p>
+<ul>
+  <li><code class="highlighter-rouge">awk -F"\t" '{print $0}' FILE</code> : The <code class="highlighter-rouge">-F</code> flag lets you specify what the column separator is (in this case, tabs), then in the single quotes and curly braces is the program awk runs. <code class="highlighter-rouge">print</code> just means print, and <code class="highlighter-rouge">$0</code> means all columns</li>
+  <li><code class="highlighter-rouge">awk -F"\t" '{print $1}' FILE</code> means print only the first column of FILE, if columns are tab-separated</li>
+  <li><code class="highlighter-rouge">awk -F"\t" '{print $1 "_" $2}' FILE</code> parses FILE as tab-separated, takes only the first two columns, and pastes them together with an underscore.</li>
+  <li><code class="highlighter-rouge">awk -F" " '{print $1}' FASTA</code> is a great way to clean up a fasta if there is junk info after whitespaces in the defline, assuming the sequence doesn’t have spaces (check first with <code class="highlighter-rouge">head</code>)</li>
+  <li>Built-in awk variables:
+    <ul>
+      <li><code class="highlighter-rouge">NR</code> is rownumber</li>
+      <li><code class="highlighter-rouge">NF</code> is number of fields in a given row</li>
+      <li><code class="highlighter-rouge">awk '{print NF}' FILE</code> prints the number of fields (columns) in each line (useful for identifying misbehaving rows if you get an error related to having an irregular number of columns)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="others">Others</h3>
+<ul>
+  <li><code class="highlighter-rouge">tr ' ' '_' &lt; FILE</code> : <strong>tr</strong>anslates space characters (first argument) to underscores (second argument). The <code class="highlighter-rouge">&lt;</code> is required for <code class="highlighter-rouge">tr</code> to read in the file, otherwise <code class="highlighter-rouge">cat FILE | tr ' ' '_'</code></li>
+  <li><code class="highlighter-rouge">sed "s/SEARCH/REPLACE/g" FILE</code> : replaces each occurrence of SEARCH with REPLACE in FILE. Sed regular expressions are amazing but sometimes complicated so will be skipped here. <a href="https://linuxhint.com/50_sed_command_examples/">50 convenient commands</a> or <a href="https://www.grymoire.com/Unix/Sed.html">more sed than you could ever want</a></li>
+</ul>
+
+<h3 id="generic-one-liner-for-loops">Generic one-liner for loops:</h3>
+
+<p><code class="highlighter-rouge">for filepath in $(ls *fastq); do echo "$filepath" done</code></p>
+
+<p>Read this as “For each file that ends with fastq, store the path to that path as a variable named filepath, and print it”</p>
+<ul>
+  <li><code class="highlighter-rouge">$()</code> is an order-of-operations thing, anything inside <code class="highlighter-rouge">$()</code> is run first, in this case generating a list of files ending with “fastq”</li>
+  <li><code class="highlighter-rouge">for filepath in </code> takes the list, and moves through the list, one at a time, and the currently read-in list entry is stored as the variable <code class="highlighter-rouge">filepath</code></li>
+  <li><code class="highlighter-rouge">echo STRING</code> : print a string to the screen</li>
+  <li><code class="highlighter-rouge">$filepath</code> : the <code class="highlighter-rouge">$</code> means that the following word is a variable name, in this case the variable updated each iteration of the for loop</li>
+</ul>
+
+<p><code class="highlighter-rouge">for file in $(ls *fastq); do prefix=$(echo $file | sed 's/.fastq//'); mv $file $newname.fq; done</code></p>
+
+<ul>
+  <li>a simple renaming loop: for each file ending with “fastq”, it defines a new variable called <code class="highlighter-rouge">prefix</code> by deleting the “.fastq” off with <code class="highlighter-rouge">sed</code> (“sample.fastq” would turned into “sample”), and then <code class="highlighter-rouge">mv</code> renames the original file to a new name, which is the contents of the prefix variable with a “.fq” suffix tacked on</li>
+  <li>In bash, there can’t be any spaces between variable name, equal sign, and contents. <code class="highlighter-rouge">prefix = 'something'</code> will be an error, but <code class="highlighter-rouge">prefix='SOMETHING</code> works</li>
+</ul>
+
+<h3 id="useful-built-in-variables">Useful built-in variables</h3>
+<ul>
+  <li><code class="highlighter-rouge">$HOME</code> : absolute path to your home folder</li>
+  <li><code class="highlighter-rouge">$PWD</code> : absolute path to the current directory</li>
+  <li><code class="highlighter-rouge">$PATH</code> : path(s) pointing to where shell should look for the program you want, like <code class="highlighter-rouge">grep</code>. If you’re trying to download and add a tool you can run, make sure it’s location is included in <code class="highlighter-rouge">$PATH</code>, either by moving it or updating <code class="highlighter-rouge">$PATH</code></li>
+</ul>
+
+<h1 id="walkthrough--tutorial-resources">Walkthrough / Tutorial Resources:</h1>
+<p>Some nice long-form resources:
+<a href="https://2017-dibsi-metagenomics.readthedocs.io/en/latest/command-line.html">One</a>    <a href="https://datacarpentry.org/shell-genomics/">Two</a>    <a href="https://edcarp.github.io/shell-genomics-eddie/aio/">Three</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Daniel Utter. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

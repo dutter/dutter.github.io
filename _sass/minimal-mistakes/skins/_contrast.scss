@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Contrast skin
+   ========================================================================== */
+
+/* Colors */
+$text-color: #000 !default;
+$muted-text-color: $text-color !default;
+$primary-color: #8abaef !default; //ff0000
+$border-color: mix(#fff, $text-color, 75%) !default;
+$footer-background-color: #000 !default;
+$link-color: #0000ff !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+/* contrast syntax highlighting (base16) */
+/*$base00: #000000 !default;
+$base01: #242422 !default;
+$base02: #484844 !default;
+$base03: #6c6c66 !default; //6c6c66
+$base04: #918f88 !default;
+$base05: #e5e3da !default; //b5b3aa
+$base06: #d9d7cc !default;
+$base07: #fdfbee !default;
+$base08: #ff6c60 !default;
+$base09: #e9c062 !default;
+$base0a: #ffffb6 !default;
+$base0b: #a8dd60 !default; //a8ff60
+$base0c: #c6c5fe !default;
+$base0d: #96cbfe !default;
+$base0e: #ff73fd !default;
+$base0f: #b18a3d !default; */
+
+/*
+//liquid-carbon
+$base00: #000000;
+$base01: #afc2c2; //a
+$base02: #ffffff;
+$base03: #303030;
+$base04: #9fa292; // comments
+$base05: #cacad0; // main commands
+$base06: #ff3030; 
+$base07: #559a70;
+$base08: #7ac4cc; // bash variable names
+$base09: #cc69c8; // invoked variables and $() 0099cc
+$base0a: #bccccc; // python from THISCOLOR import ...
+$base0b: #f04030; // string #cc69c8
+$base0c: #cc69c8;
+$base0d: #7ac4cc; // 
+$base0e: #ccac00;
+$base0f: #bccccc;
+*/
+// pale liquid carbon
+$base00: #000000;
+$base01: #afc2c2; //a
+$base02: #ffffff;
+$base03: #303030;
+$base04: #9fa292; // comments
+$base05: #cdcdcd; // main commands
+$base06: #ff3030; 
+$base07: #559a70;
+$base08: #7ac4cc; // bash variable names
+$base09: #cc69c8; // invoked variables and $() 0099cc
+$base0a: #bccccc; // python from THISCOLOR import ...
+$base0b: #65a882; // string #cc69c8
+$base0c: #cacad0;
+$base0d: #7ac4cc; // 
+$base0e: #ac8c40;
+$base0f: #cc9c30; // bash special words (for in do ${})
+// */
+
+
+.page__content {
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    color: $text-color;
+  }
+}
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}

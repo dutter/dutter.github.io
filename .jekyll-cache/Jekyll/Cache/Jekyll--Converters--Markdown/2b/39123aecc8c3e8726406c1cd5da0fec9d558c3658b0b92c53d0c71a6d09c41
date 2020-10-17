@@ -1,0 +1,13 @@
+I"<ul class="toc__menu">
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#pangenome-construction">Pangenome construction</a></li>
+  <li><a href="#annotating-gene-calls">Annotating gene calls</a></li>
+  <li><a href="#adding-some-miscellaneous-data">Adding some miscellaneous data</a></li>
+  <li><a href="#investigating-single-gene-trees-from-core-gene-clusters">Investigating single-gene trees from core gene clusters</a></li>
+  <li><a href="#extracting-genes-and-generating-gene-trees">Extracting genes and generating gene trees</a></li>
+  <li><a href="#identifying-gene-clusters-producing-interesting-topologies">Identifying gene clusters producing interesting topologies</a></li>
+  <li><a href="#phylogenetic-analysis-1-amino-acid-identity-aai">Phylogenetic analysis 1: Amino Acid Identity (AAI)</a></li>
+  <li><a href="#phylogenetic-analysis-2-phylophlan2">Phylogenetic analysis 2: PhyloPhlAn2</a></li>
+  <li><a href="#comparing-phylophlan-with-the-pangenome-dendrogram">Comparing phylophlan with the pangenome dendrogram</a></li>
+</ul>
+:ET
