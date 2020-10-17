@@ -11,7 +11,9 @@ header:
 
 I study why bacteria live where they do, what they are doing there, how they interact with each other, and how they change over time. Bacteria live everywhere we can imagine, and they often exhibit biogeography (patterns of certain bacteria appearing in certain places) across many different scales - some bacteria live only next to certain other bacteria (the micron scale), others live in certain regions of the human body but not others (centimeter scales), others might live at hydrothermal vents separated by hundreds of kilmeters.
 
-For those who think about human health, biogeography is especially important. Many microbe-associated medical problems (think *Staph. aureus* infections) are essentially the right microbe in the wrong place. Figuring out what keeps the right microbes in the right places in healthy people is critical for medical professionals to be able to keep microbes where they're supposed to be to keep us healthy. And understanding how microbes change over time in healthy populations is essential for us to be able to distinguish between change for the better or for the worse.
+For those who think about human health, biogeography is especially important. Many microbe-associated medical problems (like opportunistic infections) are essentially the right microbe in the wrong place. Figuring out what keeps the right microbes in the right places in healthy people is critical for medical professionals to be able to keep microbes where they're supposed to be to keep us healthy. And understanding how microbes change over time in healthy populations is essential for us to be able to distinguish between change for the better or for the worse. 
+
+Most of my thesis studies microbial communities in the oral cavity as it is a relevant and useful model system, but I am also interested in and work on bacteria in other systems.
 
 # Some recent projects I've worked on:
 
