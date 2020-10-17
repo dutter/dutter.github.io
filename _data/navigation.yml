@@ -1,6 +1,11 @@
-- title: About
-  url: /About/about.md
-- title: Research
-  url: Research/Research.md
-- title: Reproducible Methods
-  url: /Methods/methods.md
+main:
+  - title: About
+    url: About/about.md
+  - title: CV
+    url: CV/CV.md
+  - title: Research
+    url: /Research/Research.md
+  - title: Reproducible Methods
+    url: Methods/methods.md
+  - title: "Essential 'omics commands"
+    url: Misc/omics.md
