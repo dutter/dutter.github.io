@@ -28,7 +28,7 @@ production_url : http://dutter.github.io
 
 
 
-plugins: ["jekyll-sitemap"]
+plugins: ["jekyll-sitemap", "jekyll-include-cache"]
 
 markdown: kramdown
 highlighter: rouge
@@ -49,7 +49,7 @@ kramdown:
 
 
 #theme: minimal-mistakes-jekyll  # for local
-remote_theme: "mmistakes/minimal-mistakes@4.9.0"
+remote_theme: "mmistakes/minimal-mistakes@4.20.1"
 
 # minimal mistakes settings:
 minimal_mistakes_skin: "contrast"

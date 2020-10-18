@@ -1,8 +1,9 @@
 ---
-layout: home2
+layout: home
+author: Dan
 title: "About"
 category: page
-permalink: about
+permalink: /About
 
 header:
   image: /assets/images/home_banner.svg
