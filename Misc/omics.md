@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 
 header:
-  image: /assets/images/home_banner.svg
+  image: /assets/images/home_banner.png
 ---
 
 # Basic reference for useful 'omics-related command line
@@ -111,4 +111,4 @@ Read this as "For each file that ends with fastq, store the path to that path as
 
 # Walkthrough / Tutorial Resources:
 Some nice long-form resources:
-[One](https://2017-dibsi-metagenomics.readthedocs.io/en/latest/command-line.html)    [Two](https://datacarpentry.org/shell-genomics/)    [Three](https://edcarp.github.io/shell-genomics-eddie/aio/)
+[One](https://astrobiomike.github.io/all_tutorials/)    [Two](https://2017-dibsi-metagenomics.readthedocs.io/en/latest/command-line.html)    [Three](https://datacarpentry.org/shell-genomics/)       [Four](https://edcarp.github.io/shell-genomics-eddie/aio/) 

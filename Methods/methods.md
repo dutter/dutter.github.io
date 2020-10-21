@@ -5,7 +5,7 @@ collection: portfolio
 permalink: /Methods
 
 header:
-  image: /assets/images/home_banner.svg
+  image: /assets/images/home_banner.png
 ---
 
 ## Code and workflows from published and ongoing projects

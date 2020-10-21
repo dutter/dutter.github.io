@@ -6,7 +6,7 @@ category: page
 permalink: /About
 
 header:
-  image: /assets/images/home_banner.svg
+  image: /assets/images/home_banner.png
 ---
 
 
