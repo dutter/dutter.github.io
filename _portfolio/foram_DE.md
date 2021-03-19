@@ -1,7 +1,7 @@
 ---
-title: "*Actinomyces* comparative genomics"
-excerpt: From Utter et al., 2020 *ISME*
-permalink: projects/Act23_phylo
+title: "Santa Barbara Basin foraminiferal transcriptomes"
+excerpt: From Gomaa et al., 2021 *Science Advances**
+permalink: projects/SBB_forams
 
 toc: true
 toc_sticky: true
