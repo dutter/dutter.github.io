@@ -1,6 +1,6 @@
 ---
 title: "Santa Barbara Basin foraminiferal transcriptomes"
-excerpt: From Gomaa et al., 2021 *Science Advances**
+excerpt: From Gomaa et al., 2021 *Science Advances*
 permalink: projects/SBB_forams
 
 toc: true
