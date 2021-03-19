@@ -33,7 +33,7 @@ to capture the bulk community transcription of the forams and any
 associated bacteria or archaea, and host-enriched transcriptomes using
 polyA capture to enrich for eukaryotic mRNAs. Host transcriptomes were
 pooled and sequenced on an Illumina NovaSeq (two lanes), and
-metatranscriptomes were sequenced on an Illumina HiSeq (two runs).
+metatranscriptomes were sequenced on an Illumina NextSeq (two runs).
 Transcripts were assembled de novo with Trinity according to the
 developer’s recommendations.
 
