@@ -12,7 +12,7 @@ Overview
 --------
 
 This is a narrative methods providing a reproducible workflow of the
-analyses used in our paper **bioRxiv link**. In this paper, we describe
+analyses used in our paper [The saccharibacterium TM7x elicits differential responses across its host range](https://www.nature.com/articles/s41396-020-00736-6). In this paper, we describe
 how we found that *Nanosynbacter lyticus* TM7x can establish an
 ectosymbiotic relationship on several related *Actinomyces* spp., but
 the inital relationship differs among the susceptible strains. That is,
