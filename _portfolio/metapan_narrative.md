@@ -1,6 +1,6 @@
 ---
 title: "Metapangenomics of *Rothia* and *H. parainfluenzae*"
-excerpt: "From Utter et al., submitted"
+excerpt: "From Utter et al., 2020"
 permalink: projects/oral_metapan
 
 toc: true
@@ -14,7 +14,7 @@ Overview
 This is the long-form, narrative version of the metapangenomic methods
 used for our study [Metapangenomics of the oral microbiome provides
 insights into habitat adaptation and cultivar
-diversity](https://www.biorxiv.org/content/10.1101/2020.05.01.072496v1).
+diversity](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02200-2).
 Our goal in writing this is to make the workflow be as transparent and
 reproducible as possible, to fully describe the parameter and other
 methodological choices with data, and also to provide a step-by-step
