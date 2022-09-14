@@ -36,7 +36,7 @@ Outside of humans, it's much the same - microbes might be doing the same big-pic
 * TM7x host range - [[paper](https://www.nature.com/articles/s41396-020-00736-6)] [[methods](/projects/Act23_phylo)]
   * TM7x is an obligate bacterial symbiont that grows attached to other bacteria. Usually, TM7x is considered a parasite becuase it[impedes host growth in the lab](https://www.pnas.org/content/115/48/12277#F2)
   * Working with [Bat Bor](https://www.forsyth.org/scientists/batbileg-bor/), who found that not all hosts were affected as strongly, we compared host genomes to identify putative genes and sequence variants associated with symbiotic phenotypes
-* Santa Barbara Basin foraminifera - [[article](https://www.science.org/doi/10.1126/sciadv.abf1586)  [[methods](/projects/SBB_forams)]
+* Santa Barbara Basin foraminifera - [[article](https://www.science.org/doi/10.1126/sciadv.abf1586)]  [[methods](/projects/SBB_forams)]
   * Most [foraminifera](https://en.wikipedia.org/wiki/Foraminifera) are dependent on oxygen, and can only briefly survive without oxygen. But in the hypoxic to anoxic mud of the Santa Barbara Basin, certain forams thrive - how do they do it?
   * Led by [Fatma Gomaa](https://cavanaughlab.oeb.harvard.edu/people/fatma-gomaa), we used transcriptomes to identify multiple metabolic strategies that worked together to allow their growth in such a eukaryote-harsh environment
   * And, we found transcriptionally-active [kleptoplasts](https://en.wikipedia.org/wiki/Kleptoplasty) in these forams, despite them living in the sediments >300m below the surface?!
