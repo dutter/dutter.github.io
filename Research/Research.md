@@ -13,10 +13,16 @@ I study why bacteria live where they do, what they are doing there, how they int
 
 For those who think about human health, why microbes live where they do is especially important. Many microbe-associated medical problems (like opportunistic infections) are essentially the right microbe in the wrong place. Figuring out what keeps the right microbes in the right places in healthy people is critical for medical professionals to be able to keep microbes where they're supposed to be to keep us healthy. And understanding how microbes change over time in healthy populations is essential for us to be able to distinguish between change for the better or for the worse. 
 
-Outside of humans, it's much the same - microbes might be doing the same big-picture job (like consuming methane), but the rates at which they do their task can vary substantially depending on their localized environment. 
+Outside of humans, it's much the same - microbes might be doing the same big-picture job (like consuming methane), but the rates at which they do their task can vary substantially depending on their localized environment. And, the modes by which microbes may evolve may be constrained by environment type.
 
 
 # Some recent projects I've worked on:
+
+## Ongoing postdoc work:
+* How does strain-level diversity occur and impact anaerobic methane oxidation in deep-sea sediments?
+  * Anaerobic methanotrophic archaea (ANME) and sulfate reducing bacteria (SRB) form syntrophic aggregates to perform the anaerobic oxidation of methane in methane-rich sediments like at seafloor methane seeps
+  * This is a very unusual metabolism, yielding little energy. However, this strategy unlocks an otherwise hard-to-live-in niche, so these ANME/SRB aggregates can reach high densities in such seafloor environments
+  * In the Orphan lab, I study how subtle variations can give rise to ecological differentiation using a combination of microscopy, genomic, and incubation techniques.
 
 ## Some thesis projects:
 * How different are strains of a given bacterial species? - [[paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02200-2)]  [[methods](/projects/oral_metapan)]
